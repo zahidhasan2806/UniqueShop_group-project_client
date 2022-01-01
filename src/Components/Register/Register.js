@@ -1,6 +1,6 @@
 import { Alert, CircularProgress, Container, Grid, TextField } from '@mui/material';
 import React, { useState } from 'react';
-import { NavLink, useHistory, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../Hook/useAuth';
 
 
@@ -8,7 +8,7 @@ import useAuth from '../Hook/useAuth';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
-    const history = useHistory();
+    const navigate = useNavigate();
     const location = useLocation();
 
     const { user, registerUser, isLoading, authError,signInWithGoogle } = useAuth();
@@ -26,12 +26,12 @@ const Register = () => {
             return
         }
 
-        registerUser(loginData.email, loginData.password, loginData.name, history);
+        registerUser(loginData.email, loginData.password, loginData.name, navigate);
 
 
     }
     const handleGoogleSignIn = () => {
-        signInWithGoogle(location, history)
+        signInWithGoogle(location, navigate)
     }
     return (
         <Container className="text-center register">
