@@ -12,17 +12,17 @@ function App() {
   return (
     <AuthProvider>
       <div className="App">
-      <Header />
-      <BrowserRouter>
-  
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="home" element={<Home />} />
-      <Route path="login" element={<Login />} />
-      <Route path="register" element={<Register />} />
-    </Routes>
-  </BrowserRouter>
-  <Footer />
+        <Header />
+        <BrowserRouter>
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+          </Routes>
+        </BrowserRouter>
+        <Footer />
       </div>
     </AuthProvider>
   );
