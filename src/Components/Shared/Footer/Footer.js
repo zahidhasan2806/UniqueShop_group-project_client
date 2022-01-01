@@ -29,9 +29,10 @@ const Footer = () => {
                 <p>Shipping & Delivery</p>
                 <p>Privacy Policy</p>
             </div>
-            <div>
+     
                 
-            </div>
+            
+
         </div>
     );
 };
