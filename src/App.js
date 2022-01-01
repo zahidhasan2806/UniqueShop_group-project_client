@@ -5,6 +5,7 @@ import AuthProvider from './Components/Context/AuthProvider';
 import Login from './Components/Login/Login';
 import Home from './Components/Pages/Home/Home';
 import Register from './Components/Register/Register';
+import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path="register" element={<Register />} />
     </Routes>
   </BrowserRouter>
+  <Footer />
       </div>
     </AuthProvider>
   );
