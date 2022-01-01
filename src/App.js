@@ -14,8 +14,9 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <Header />
+       
         <BrowserRouter>
+        <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="home" element={<Home />} />
@@ -23,8 +24,9 @@ function App() {
             <Route path="register" element={<Register />} />
             <Route path="dashboard" element={<Dashboard />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
-        <Footer />
+        
       </AuthProvider>
     </div>
   );
