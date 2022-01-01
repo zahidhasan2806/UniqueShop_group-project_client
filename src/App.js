@@ -8,7 +8,9 @@ import Home from './Components/Pages/Home/Home';
 import Product from './Components/Pages/Product/Product';
 import ProductDetails from './Components/Pages/ProductDetails/ProductDetails';
 import Register from './Components/Register/Register';
+import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </AuthProvider>
     </div>
   );
