@@ -6,7 +6,9 @@ import Login from './Components/Login/Login';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import Home from './Components/Pages/Home/Home';
 import Register from './Components/Register/Register';
+import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </AuthProvider>
     </div>
   );
