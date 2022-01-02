@@ -17,6 +17,7 @@
 .menu .menu-item a {
   text-decoration: none;
   color: #878787;
+  transition: 0.3s;
 }
 .contect a {
   text-decoration: none;

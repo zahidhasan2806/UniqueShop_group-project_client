@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './Components/Context/AuthProvider';
 import Login from './Components/Login/Login';
+import ContactUs from './Components/Pages/ContactUs/ContactUs';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import Home from './Components/Pages/Home/Home';
 import Product from './Components/Pages/Product/Product';
@@ -27,6 +28,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="contact" element={<ContactUs />} />
           </Routes>
           <Footer />
         </BrowserRouter>
