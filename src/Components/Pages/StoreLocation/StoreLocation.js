@@ -17,7 +17,7 @@ const StoreLocation = () => {
                             <h3 className='fw-bold'>DUBAI</h3>
                             <h4>Mall of the Emirates</h4>
                             <p>4th Interchange, Sheikh Zayed Road 1st Level</p>
-                            <p>Tel: +971-4 341 3666</p>
+                            <p>Tel: +971-4 341 3665</p>
                         </div>
                         <div className='mt-4'>
 
