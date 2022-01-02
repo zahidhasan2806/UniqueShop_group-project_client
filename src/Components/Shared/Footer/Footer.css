@@ -7,6 +7,10 @@
 .menu {
   text-align: start !important;
 }
+.menu .menu-item {
+  margin-bottom: 10px;
+  line-height: 30px;
+}
 .menu .menu-item a {
   text-decoration: none;
 }
@@ -36,4 +40,16 @@
 
 .contect {
   text-align: start;
+}
+.footer {
+  background-color: #f6f6f8;
+  padding-top: 60px;
+}
+.copyright {
+  background-color: white;
+  color: #878787;
+  padding-top: 10px;
+}
+.all-menu {
+  padding-bottom: 60px;
 }
