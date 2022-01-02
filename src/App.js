@@ -18,6 +18,7 @@ import ProductDetails from './Components/Pages/ProductDetails/ProductDetails';
 import Register from './Components/Register/Register';
 import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
+import StoreLocation from './Components/Pages/StoreLocation/StoreLocation';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path="product/:_id" element={<ProductDetails />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
+            <Route path="storeLocation" element={<StoreLocation />} />
             <Route path="dashboard" element={<Dashboard />} >
               <Route path="/dashboard/addnewproduct" element={<AddNewProduct />} ></Route>
               <Route path="/dashboard/manageorders" element={<ManageOrders />} ></Route>
