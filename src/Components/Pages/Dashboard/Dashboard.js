@@ -33,8 +33,8 @@ const Dashboard = () => {
                                 {/* </>}
                             {admin && <div> */}
                                 <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/manageallorders"> <FontAwesomeIcon icon={faShoppingBasket} /> Manage All Orders</Nav.Link><br />
-                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/manageservices"> <FontAwesomeIcon icon={faTasks} /> Manage Services</Nav.Link><br />
-                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/addnewservice"><FontAwesomeIcon icon={faFolderPlus} /> Add A Service</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/manageservices"> <FontAwesomeIcon icon={faTasks} /> Manage Products</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/addnewproduct"><FontAwesomeIcon icon={faFolderPlus} /> Add A Product</Nav.Link><br />
                                 <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/makeadmin"><FontAwesomeIcon icon={faUserShield} /> Make Admin</Nav.Link><br />
                                 {/* </div>} */}
                                 <hr className="w-100 mx-auto text-dark" />

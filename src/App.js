@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './Components/Context/AuthProvider';
 import Login from './Components/Login/Login';
-import ContactUs from './Components/Pages/ContactUs/ContactUs';
+import AddNewProduct from './Components/Pages/Dashboard/AddNewProduct/AddNewProduct';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import Home from './Components/Pages/Home/Home';
 import Product from './Components/Pages/Product/Product';
@@ -17,9 +17,9 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-       
+
         <BrowserRouter>
-        <Header />
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="home" element={<Home />} />
@@ -27,12 +27,13 @@ function App() {
             <Route path="product/:_id" element={<ProductDetails />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="contact" element={<ContactUs />} />
+            <Route path="dashboard" element={<Dashboard />} >
+              <Route path="/dashboard/addnewproduct" element={<AddNewProduct />} ></Route>
+            </Route>
           </Routes>
           <Footer />
         </BrowserRouter>
-        
+
       </AuthProvider>
     </div>
   );
