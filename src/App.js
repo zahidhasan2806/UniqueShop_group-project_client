@@ -1,15 +1,26 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
 import AuthProvider from './Components/Context/AuthProvider';
+import Login from './Components/Login/Login';
 import Home from './Components/Pages/Home/Home';
-import NavBar from './Components/Pages/Home/NavBar';
+import Register from './Components/Register/Register';
+import Header from './Components/Shared/Header/Header';
 
 function App() {
   return (
     <AuthProvider>
       <div className="App">
-        <NavBar></NavBar>
-      <Home></Home>
+      <Header />
+      <BrowserRouter>
+  
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="home" element={<Home />} />
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
+    </Routes>
+  </BrowserRouter>
       </div>
     </AuthProvider>
   );
