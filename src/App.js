@@ -6,23 +6,35 @@ import Login from './Components/Login/Login';
 import Home from './Components/Pages/Home/Home';
 import Register from './Components/Register/Register';
 import Header from './Components/Shared/Header/Header';
+import Dashboard from './Components/Pages/Dashboard/Dashboard';
+import Product from './Components/Pages/Product/Product';
+import ProductDetails from './Components/Pages/ProductDetails/ProductDetails';
+import Footer from './Components/Shared/Footer/Footer';
+
+
+
 
 function App() {
   return (
-    <AuthProvider>
-      <div className="App">
-      <Header />
-      <BrowserRouter>
-  
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="home" element={<Home />} />
-      <Route path="login" element={<Login />} />
-      <Route path="register" element={<Register />} />
-    </Routes>
-  </BrowserRouter>
-      </div>
-    </AuthProvider>
+    <div className="App">
+      <AuthProvider>
+
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="product" element={<Product />} />
+            <Route path="product/:_id" element={<ProductDetails />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+            <Route path="dashboard" element={<Dashboard />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+
+      </AuthProvider>
+    </div>
   );
 }
 
