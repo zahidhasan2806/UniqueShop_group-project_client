@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Featured = () => {
     const [services, setServices] = useState([]);
+
     useEffect(() => {
         fetch("https://young-shore-30046.herokuapp.com/products")
             .then((res) => res.json())
@@ -11,7 +12,13 @@ const Featured = () => {
     console.log(services);
     return (
         <div>
-            <h1>Feature Collections</h1>
+            <h1 className="m-5">Feature Collections</h1>
+            <div className="d-flex justify-content-center">
+                <h3 className="pe-3">Accesories</h3>
+                <h3 className="pe-3">Smart TV</h3>
+                <h3 className="pe-3">Camera</h3>
+                <h3 className="pe-3">Digital</h3>
+            </div>
             <div className="services">
                 <div className="row container">
                     {services.slice(0, 6)?.map((pd, index) => (
@@ -28,7 +35,7 @@ const Featured = () => {
 
                                 <Link to={`/purchasing/${pd._id}`}>
                                     {" "}
-                                    <h5>{pd.title}</h5>
+                                    <h6>{pd.title}</h6>
                                 </Link>
                                 <p className="text-danger">Price: {pd.price}</p>
                             </div>
