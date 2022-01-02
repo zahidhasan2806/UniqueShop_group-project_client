@@ -22,6 +22,7 @@ import Header from './Components/Shared/Header/Header';
 import StoreLocation from './Components/Pages/StoreLocation/StoreLocation';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -34,6 +35,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="product" element={<Product />} />
             <Route path="contact" element={<ContactUs />} />
+            <Route path="about" element={<AboutUs />} />
             <Route path="product/:_id" element={<ProductDetails />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
