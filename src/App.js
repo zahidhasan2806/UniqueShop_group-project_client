@@ -9,6 +9,9 @@ import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import ManageAllProducts from './Components/Pages/Dashboard/ManageAllProducts/ManageAllProducts';
 import ManageOrders from './Components/Pages/Dashboard/ManageOrders/ManageOrders';
 import MyOrders from './Components/Pages/Dashboard/MyOrders/MyOrders';
+import Payment from './Components/Pages/Dashboard/Payment/Payment';
+import MakeAdmin from './Components/Pages/Dashboard/MakeAdmin/MakeAdmin';
+import Reviews from './Components/Pages/Dashboard/Reviews/Reviews';
 import Home from './Components/Pages/Home/Home';
 import Product from './Components/Pages/Product/Product';
 import ProductDetails from './Components/Pages/ProductDetails/ProductDetails';
@@ -37,6 +40,9 @@ function App() {
               <Route path="/dashboard/manageorders" element={<ManageOrders />} ></Route>
               <Route path="/dashboard/myorders" element={<MyOrders />} ></Route>
               <Route path="/dashboard/manageallproducts" element={<ManageAllProducts />} ></Route>
+              <Route path="/dashboard/reviews" element={<Reviews />} ></Route>
+              <Route path="/dashboard/makeadmin" element={<MakeAdmin />} ></Route>
+              <Route path='/dashboard/payment' element={<Payment />}></Route>
             </Route>
           </Routes>
           <Footer />
