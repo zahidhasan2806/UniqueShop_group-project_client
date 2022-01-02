@@ -14,7 +14,7 @@ const Dashboard = () => {
                 <Navbar collapseOnSelect expand="md"  >
                     <Container className="d-flex flex-column dashboard-route">
 
-                        <Navbar.Brand className="text-dark me-auto fs-2 fw-bold" href="/home">UNIQUESHOP</Navbar.Brand>
+                        <Navbar.Brand className="text-dark me-auto fs-2 fw-bold" href="/home">UNIQUE<span className="text-danger">SHOP</span></Navbar.Brand>
                         <hr className="w-100 bg-white" />
 
                         <Navbar.Text className="text-dark my-1 fs-4 text-start me-auto">

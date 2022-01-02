@@ -12,29 +12,29 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('')
 
-  
+
 
   const googleProvider = new GoogleAuthProvider()
   const auth = getAuth();
 
-  
-  const signInWithGoogle = (location,navigate) => {
+
+  const signInWithGoogle = (location, navigate) => {
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
-        .then((result) => {
-            const user = result.user;
-            saveUser(user.email, user.displayName, 'PUT');
-            setAuthError('');
-            const destination = location?.state?.from || '/';
-            navigate(destination);
-      
-        }).catch((error) => {
-            setAuthError(error.message);
-        }).finally(() => setIsLoading(false));
-}
+      .then((result) => {
+        const user = result.user;
+        saveUser(user.email, user.displayName, 'PUT');
+        setAuthError('');
+        const destination = location?.state?.from || '/';
+        navigate(destination);
+
+      }).catch((error) => {
+        setAuthError(error.message);
+      }).finally(() => setIsLoading(false));
+  }
 
 
-// user register 
+  // user register 
   const registerUser = (email, password, name, navigate) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
@@ -56,7 +56,7 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   }
 
-// user login
+  // user login
   const loginUser = (email, password, location, navigate) => {
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
@@ -71,7 +71,7 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   }
 
-   
+
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -86,7 +86,7 @@ const useFirebase = () => {
     });
   }, [auth])
 
- 
+
   const logOut = () => {
     setIsLoading(true);
     signOut(auth)
@@ -97,15 +97,15 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch('https://arcane-ravine-56101.herokuapp.com/users', {
-        method: method,
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(user)
+    fetch('https://young-shore-30046.herokuapp.com/users', {
+      method: method,
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
     })
-        .then()
-}
+      .then()
+  }
   return {
     user,
     signInWithGoogle,
