@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import "./ProductDetails.css"
+import "./ProductDetails.css";
 
 const ProductDetails = () => {
     let { _id } = useParams();
@@ -11,7 +11,7 @@ const ProductDetails = () => {
         .then(data=>setFullDetails(data))
     }, [])
 
-    const filteredProduct = fullDetails.find(product => product._id == _id);
+    const filteredProduct = fullDetails.find(product => product._id === _id);
     console.log(filteredProduct);
     return (
         <div className='container'>
