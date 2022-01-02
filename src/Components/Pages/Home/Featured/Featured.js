@@ -11,7 +11,7 @@ const Featured = () => {
     return (
         <div className="Feature">
             <div className="services">
-            <h1>Feature Collections</h1>
+            <h1 className="">Best Selling</h1>
                 <div className="row container">
                     {services.slice(0, 8)?.map((pd, index) => (
                         <div className="col-md-12 col-lg-3 mt-2">

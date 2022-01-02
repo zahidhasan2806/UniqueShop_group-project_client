@@ -18,6 +18,10 @@
 .Feature a {
   text-decoration: none;
 }
+.Feature h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
 .Feature a h5 {
   color: #222;
   font-size: 14px;

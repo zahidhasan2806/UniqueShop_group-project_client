@@ -9,9 +9,6 @@ import Home from './Components/Pages/Home/Home';
 import Product from './Components/Pages/Product/Product';
 import ProductDetails from './Components/Pages/ProductDetails/ProductDetails';
 import Register from './Components/Register/Register';
-import Footer from './Components/Shared/Footer/Footer';
-import Header from './Components/Shared/Header/Header';
-
 
 function App() {
   return (
@@ -19,7 +16,6 @@ function App() {
       <AuthProvider>
        
         <BrowserRouter>
-        <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="home" element={<Home />} />
@@ -30,7 +26,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="contact" element={<ContactUs />} />
           </Routes>
-          <Footer />
+         
         </BrowserRouter>
         
       </AuthProvider>
