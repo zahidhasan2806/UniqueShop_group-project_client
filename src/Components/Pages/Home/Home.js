@@ -1,33 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Button, Card, CardGroup } from 'react-bootstrap';
-=======
 import { Button, Card, CardGroup, Carousel, Col, Row } from 'react-bootstrap';
 import Featured from './Featured';
->>>>>>> 18dea8f544a21c770974548cf030fc784c4afd9e
 const Home = () => {
 
     return (
         <div>
-<<<<<<< HEAD
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 col-md-4">
-                        <div className='align-middle justify-content-center align-items-center text-center'>
-                            <h3>Meet Galaxy S20,S20+</h3>
-                            <p>This is the phone that will change photography</p>
-                        </div>
-                        <Button variant="dark">Explore Now</Button>{' '}
-                    </div>
-                    <div class="col-md-8">
-                        <img className="d-block w-100" src="https://cdn.shopify.com/s/files/1/0328/0961/5495/files/big-slider_1950x.jpg?v=1589377269" alt="First slide" />
-                    </div>
-                </div>
-            </div>
-=======
             <Carousel >
                 <Carousel.Item className="text-primary w-100 image-fluid ">
->>>>>>> 18dea8f544a21c770974548cf030fc784c4afd9e
 
                     <img
                         className="d-block w-100"
@@ -44,91 +23,14 @@ const Home = () => {
                 </Carousel.Item>
             </Carousel>
             {/* Banner */}
-<<<<<<< HEAD
-
-
-
-            <div>
-                {/* <Carousel >
-                    <Carousel.Item className="text-primary w-100 image-fluid">
-                       
-                        <img
-                            className="d-block w-100"
-                            src="https://cdn.shopify.com/s/files/1/0328/0961/5495/files/big-slider_1950x.jpg?v=1589377269"
-                            alt="First slide"
-                        />
-                        <Carousel.Caption className="text-dark align-items-center text-center justify-content-center">
-                            <h3>Meet Galaxy S20,S20+</h3>
-                            <p>This is the phone that will change photography</p>
-                            <Button variant="dark">Explore Now</Button>{' '}
-                            
-                        </Carousel.Caption>
-                    </Carousel.Item> */}
-                {/* <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src=""
-                            alt="Second slide"
-                        />
-=======
-
-            <div>
->>>>>>> 18dea8f544a21c770974548cf030fc784c4afd9e
-
-
-
-<<<<<<< HEAD
-            </div>
 
             <div>
 
 
 
-            </div>
-            <div className="m-5 p-5">
-                <h1>Best 3 products in this month</h1>
-                <div>
-
-
-                    <CardGroup className="p-5">
-                        <Card className="p-5">
-                            <Card.Img variant="top" src="" />
-                            <Card.Body>
-                                <Card.Title>FREE SHIPPING</Card.Title>
-                                <Card.Text>
-                                    Free shipping on all US order
-                                    or order above $100
-                                </Card.Text>
-                            </Card.Body>
-
-                        </Card>
-                        <Card className="p-5">
-                            <Card.Img variant="top" src="" />
-                            <Card.Body>
-                                <Card.Title>SUPPORT 24/7</Card.Title>
-                                <Card.Text>
-                                    Contact us 24 hours a day
-                                    7 days a week
-                                </Card.Text>
-                            </Card.Body>
-
-                        </Card>
-                        <Card className="p-5 w-100 fluid" >
-                            <Card.Img variant="top" src="" />
-                            <Card.Body >
-                                <Card.Title>30 DAYS RETURN</Card.Title>
-                                <Card.Text>
-                                    30 DAYS RETURN
-                                </Card.Text>
-                            </Card.Body>
-
-                        </Card>
-                    </CardGroup>
-=======
                 {/* Banner */}
 
                 <div>
->>>>>>> 18dea8f544a21c770974548cf030fc784c4afd9e
                 </div>
                 <div className="m-5 p-5">
 
