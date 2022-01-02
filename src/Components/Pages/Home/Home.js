@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card, CardGroup, Carousel, Col, Row } from 'react-bootstrap';
+import Product from '../Product/Product';
 import Featured from './Featured';
 const Home = () => {
 
@@ -76,6 +77,7 @@ const Home = () => {
                     <div className='container'>
 
                         <Row xs={1} md={2} className="g-4">
+
                             <Col >
                                 <Card className='w-50 h-100 fluid'>
                                     <Card.Img variant="" className="" src="https://brotherselectronicsbd.com/image/cache/catalog/demo/product/Samsung/Smartphone/S20%20FE/2-800x800.jpg" />
@@ -127,7 +129,8 @@ const Home = () => {
                             {/* ))} */}
                         </Row>
                     </div>
-
+                    {/* Best Selling */}
+                    <Product></Product>
                     {/* Featured */}
 
                     <Featured></Featured>
