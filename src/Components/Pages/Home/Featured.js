@@ -19,7 +19,7 @@ const Featured = () => {
                 <h3 className="pe-3">Digital</h3>
             </div>
             <div className="services">
-                <h1>Feature Collections</h1>
+
                 <div className="row container">
                     {services.slice(0, 8)?.map((pd, index) => (
                         <div className="col-md-12 col-lg-3 mt-2">
@@ -37,7 +37,7 @@ const Featured = () => {
                                     {" "}
                                     <h6>{pd.title}</h6>
                                 </Link>
-                                <p className="product-price">Price: {pd.price}</p>
+                                <p className="product-price text-danger">Price: {pd.price}</p>
                             </div>
                         </div>
                     ))}
