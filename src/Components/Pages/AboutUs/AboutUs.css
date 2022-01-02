@@ -1,0 +1,8 @@
+.bannerBackground{
+    background-image: url("../../../images/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    color: rgb(250, 251, 252);
+    
+}

@@ -21,10 +21,10 @@ const Featured = () => {
                                         {" "}
                                         <img className="w-100" src={pd?.image} alt="" />
                                     </Link>
-
+ 
                                 </div>
-
-
+ 
+ 
                                 <Link to={`/product/${pd._id}`}>
                                     {" "}
                                     <h5 >{pd.title}</h5>
@@ -38,5 +38,5 @@ const Featured = () => {
         </div>
     );
 };
-
+ 
 export default Featured;

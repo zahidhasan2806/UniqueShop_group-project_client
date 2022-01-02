@@ -1,0 +1,47 @@
+.get-it {
+  border: 2px solid black;
+  width: 100px;
+  margin-top: 50px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+.single-col a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.banner3-buy-now {
+  border: 2px solid black;
+  width: 100px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+.item-btn {
+  margin-top: 100px;
+  margin-left: 0 !important;
+}
+.banner3-shop-now {
+  border: 2px solid black;
+  width: 100px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+
+.banner3-shop-div {
+  margin-top: 40px;
+  margin-right: 150px;
+}
+.up-t030 > p {
+  font-size: 40px;
+}
+.banner3 .heading {
+  font-size: 16px !important;
+}
+@media only screen and (max-width: 688px) {
+  .up-t030 {
+    margin-right: 40%;
+  }
+}
