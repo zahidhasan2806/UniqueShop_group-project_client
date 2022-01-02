@@ -6,7 +6,6 @@ const Home = () => {
 
     return (
         <div>
-
             <Carousel >
                 <Carousel.Item className="text-primary w-100 image-fluid ">
 
