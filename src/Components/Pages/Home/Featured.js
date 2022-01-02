@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import './Featured.css';
+
 const Featured = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
@@ -8,28 +8,29 @@ const Featured = () => {
             .then((res) => res.json())
             .then((data) => setServices(data));
     }, []);
+    console.log(services);
     return (
-        <div className="Feature">
-            <div className="services">
+        <div>
             <h1>Feature Collections</h1>
+            <div className="services">
                 <div className="row container">
-                    {services.slice(0, 8)?.map((pd, index) => (
-                        <div className="col-md-12 col-lg-3 mt-2">
-                            <div className="service p-3 border border mt-5 me-4  products-card">
+                    {services.slice(0, 6)?.map((pd, index) => (
+                        <div className="col-md-6 col-lg-4">
+                            <div className="service p-3 border border m-2">
                                 <div className="service-img">
-                                    <Link to={`/product/${pd._id}`}>
+                                    <Link to={`/purchasing/${pd._id}`}>
                                         {" "}
-                                        <img className="w-100" src={pd?.image} alt="" />
+                                        <img className="w-50" src={pd?.image} alt="" />
                                     </Link>
 
                                 </div>
 
 
-                                <Link to={`/product/${pd._id}`}>
+                                <Link to={`/purchasing/${pd._id}`}>
                                     {" "}
-                                    <h5 >{pd.title}</h5>
+                                    <h5>{pd.title}</h5>
                                 </Link>
-                                <p className="product-price">Price: {pd.price}</p>
+                                <p className="">Price: {pd.price}</p>
                             </div>
                         </div>
                     ))}
