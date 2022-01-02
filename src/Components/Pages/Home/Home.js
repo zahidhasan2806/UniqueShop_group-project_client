@@ -22,21 +22,18 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-            {/* Banner */}
+            
 
             <div>
 
 
 
-                {/* Banner */}
 
                 <div>
                 </div>
-                <div className="m-5 p-5">
+                <div className="">
 
                     <div>
-
-
                         <CardGroup className="p-5">
                             <Card className="p-5">
                                 <Card.Img variant="top" src="" />
@@ -128,10 +125,9 @@ const Home = () => {
                         </Row>
                     </div>
 
-                    {/* Featured */}
 
                     <Featured></Featured>
-                    {/* BLogs */}
+                   
                     <h1>Blogs</h1>
                     <div className="card-group">
                         <div className="card me-5">
