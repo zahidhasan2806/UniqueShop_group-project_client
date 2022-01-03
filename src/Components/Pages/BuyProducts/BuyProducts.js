@@ -46,7 +46,7 @@ const BuyProducts = () => {
                         <div className="row">
                             <div className="d-flex col-md-6 product-deatils">
                                 <div className="product-img">
-                                    <img src={image} alt="" />
+                                    <img src={`data:image/png;base64,${image}`} alt="" />
                                 </div>
                                 <div className="product-title">
                                     <p>{title}</p>

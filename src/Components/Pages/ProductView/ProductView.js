@@ -9,93 +9,103 @@ import './ProductView.css';
 const ProductView = () => {
     let { productId } = useParams()
     const location = useLocation();
-    const [product, setProduct] = useState([])
+    const [product, setProduct] = useState([]);
+    const [isloading, setIsLoading] = useState(true);
+
     const sharelink = (`http://localhost:3000${location.pathname}`)
     useEffect(() => {
         const url = `https://young-shore-30046.herokuapp.com/products/${productId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
+            .finally(() => setIsLoading(false))
     }, [productId])
 
 
-    const {_id, price, image, desc1,desc2,desc3,desc4, title,Categories } = product;
+    const { _id, price, image, desc1, desc2, desc3, desc4, title, Categories } = product;
     console.log(product)
 
-
-    return (
-       <>
-       <Header />
-       <div className="container product-view">
-            <div className="d-flex prodcout-sec">
-                <div>
-                    <img className="product-image" src={image} alt={title} />
-                </div>
-                <div className="product-content">
-                    <h2 className="product-title">{title}</h2>
-                    <h2 className="product-price">(approx. ${price})</h2>
-                    <h2 className="product-price">Categories: {Categories}</h2>
-                    <p className="product-description">{desc1+desc2+desc3+desc4}</p>
-                    <div className="produt-btn">
-                        <Link to={`/buyProducts/${_id}`}><button className="buy-now-btn">BUY</button></Link>
-                       
-                        <button type="button" className="share-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            SHARE
-                        </button>
-                        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            
-                            <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                <div className="modal-content">
-                                <button type="button" className="close-btn" data-bs-dismiss="modal"><img src="https://i.ibb.co/SfJQmw7/cors-btn.png" alt="" /></button>
-                                    <div className="modal-body text-center">
-                                    
-                                        <FacebookShareButton className="m-2"
-                                            url={sharelink}
-
-                                        >
-                                            <FacebookIcon logofillcolor="white" />
-
-                                        </FacebookShareButton>
-
-                                        <TwitterShareButton
-                                        className="m-2"
-                                            url={sharelink}
-                                        >
-
-                                            <TwitterIcon logofillcolor="white" />
-                                        </TwitterShareButton>
-
-                                        <LinkedinShareButton
-                                        className="m-2"
-                                            url={sharelink}
-
-                                            >
-                                            <LinkedinIcon logofillcolor="white" />
-                                        </LinkedinShareButton>
-
-                                        <EmailShareButton
-                                        className="m-2"
-                                            url={sharelink}
-
-                                         >
-                                            <EmailIcon logofillcolor="white" />
-                                        </EmailShareButton>
-                                       
-                                    </div>
-                                 
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
+    if (isloading) {
+        return <div className="d-flex justify-content-center">
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
             </div>
         </div>
-       <Footer />
-       </>
-    );
-};
+    } else {
+        return (
+            <>
+                <Header />
+                <div className="container product-view">
+                    <div className="d-flex prodcout-sec">
+                        <div>
+                            <img className="product-image" src={`data:image/png;base64,${image}`} alt={title} />
+                        </div>
+                        <div className="product-content">
+                            <h2 className="product-title">{title}</h2>
+                            <h2 className="product-price">(approx. ${price})</h2>
+                            <h2 className="product-price">Categories: {Categories}</h2>
+                            <p className="product-description">{desc1 + desc2 + desc3 + desc4}</p>
+                            <div className="produt-btn">
+                                <Link to={`/buyProducts/${_id}`}><button className="buy-now-btn">BUY</button></Link>
+
+                                <button type="button" className="share-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    SHARE
+                                </button>
+                                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+
+                                    <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                        <div className="modal-content">
+                                            <button type="button" className="close-btn" data-bs-dismiss="modal"><img src="https://i.ibb.co/SfJQmw7/cors-btn.png" alt="" /></button>
+                                            <div className="modal-body text-center">
+
+                                                <FacebookShareButton className="m-2"
+                                                    url={sharelink}
+
+                                                >
+                                                    <FacebookIcon logofillcolor="white" />
+
+                                                </FacebookShareButton>
+
+                                                <TwitterShareButton
+                                                    className="m-2"
+                                                    url={sharelink}
+                                                >
+
+                                                    <TwitterIcon logofillcolor="white" />
+                                                </TwitterShareButton>
+
+                                                <LinkedinShareButton
+                                                    className="m-2"
+                                                    url={sharelink}
+
+                                                >
+                                                    <LinkedinIcon logofillcolor="white" />
+                                                </LinkedinShareButton>
+
+                                                <EmailShareButton
+                                                    className="m-2"
+                                                    url={sharelink}
+
+                                                >
+                                                    <EmailIcon logofillcolor="white" />
+                                                </EmailShareButton>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <Footer />
+            </>
+        );
+    };
+}
 
 export default ProductView;

@@ -19,7 +19,7 @@ const Featured = () => {
                                 <div className="service-img">
                                     <Link to={`/product/${pd._id}`}>
                                         {" "}
-                                        <img className="w-100" src={pd?.image} alt="" />
+                                        <img className="w-100" src={`data:image/png;base64,${pd.image}`} alt="" />
                                     </Link>
 
                                 </div>

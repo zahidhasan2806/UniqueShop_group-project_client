@@ -32,7 +32,7 @@ const SingleProducts = ({ product }) => {
         <div className="prodcuts-details-manage">
             <div className="d-flex ">
                 <div className="my-order-img">
-                    <img src={image} alt="" />
+                    <img src={`data:image/png;base64,${image}`} alt="" />
                 </div>
                 <div className="my-order-title">
                     <p>{title}</p>
