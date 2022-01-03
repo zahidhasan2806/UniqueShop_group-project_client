@@ -18,13 +18,13 @@ const FeaturedCollection = () => {
                                 <div className="service-img">
                                     <Link to={`/product/${pd._id}`}>
                                         {" "}
-                                        <img className="w-100" src={pd?.image} alt="" />
+                                        <img className="w-100" src={`data:image/png;base64,${pd.image}`} alt="" />
                                     </Link>
 
                                 </div>
 
 
-                                <Link to={`/product/${pd._id}`}>
+                                <Link to={`/ product / ${pd._id}`}>
                                     {" "}
                                     <h5 >{pd.title}</h5>
                                 </Link>

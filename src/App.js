@@ -19,6 +19,7 @@ import Home from './Components/Pages/Home/Home';
 import Product from './Components/Pages/Product/Product';
 import ProductView from './Components/Pages/ProductView/ProductView';
 import StoreLocation from './Components/Pages/StoreLocation/StoreLocation';
+import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import Register from './Components/Register/Register';
 
 
@@ -36,12 +37,14 @@ function App() {
             <Route path="contact" element={<ContactUs />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="product/:productId" element={<ProductView />} />
-            <Route path="buyProducts/:productId" element={<BuyProducts />} />
+            <Route path="buyProducts/:productId" element={<ProtectedRoute><BuyProducts /></ProtectedRoute>} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="storeLocation" element={<StoreLocation />} />
             <Route path="/blog/blogDetails1" element={<BlogDetails1 />} />
             <Route path="dashboard" element={<Dashboard />} >
+
+
               <Route path="/dashboard/addnewproduct" element={<AddNewProduct />} ></Route>
               <Route path="/dashboard/manageorders" element={<ManageOrders />} ></Route>
               <Route path="/dashboard/myorders" element={<MyOrders />} ></Route>
