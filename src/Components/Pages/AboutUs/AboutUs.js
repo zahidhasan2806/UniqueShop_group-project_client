@@ -1,12 +1,16 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import "./AboutUs.css";
 import img1 from "../../../images/img10.jpg";
-import img2 from "../../../images/img8.jpg";
 import img3 from "../../../images/img7.jpg";
+import img2 from "../../../images/img8.jpg";
+import Footer from "../../Shared/Footer/Footer";
+import Header from "../../Shared/Header/Header";
+import "./AboutUs.css";
 
 const AboutUs = () => {
     return (
+      <>
+      <Header />
       <div>
         <div>
           <div className="bannerBackground d-flex align-items-center justify-content-center">
@@ -94,6 +98,8 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <Footer />
+      </>
     );
 };
 

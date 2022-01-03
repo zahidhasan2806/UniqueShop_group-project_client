@@ -2,6 +2,8 @@ import { Alert, CircularProgress, Container, Grid, TextField } from '@mui/materi
 import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../Hook/useAuth';
+import Footer from '../Shared/Footer/Footer';
+import Header from '../Shared/Header/Header';
 
 
 
@@ -34,6 +36,8 @@ const Register = () => {
         signInWithGoogle(location, navigate)
     }
     return (
+        <>
+        <Header />
         <Container className="text-center register">
             {/* <Grid container spacing={2}> */}
             <Grid item sx={{ mt: 8 }} xs={12} md={12}>
@@ -87,8 +91,10 @@ const Register = () => {
                 {authError && <Alert severity="error">{authError}</Alert>}
             </Grid>
 
-            {/* </Grid> */}
+         
         </Container>
+        <Footer />
+        </>
     );
 };
 

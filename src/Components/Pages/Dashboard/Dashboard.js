@@ -1,10 +1,10 @@
-import { faColumns, faComment, faFileInvoice, faFolderPlus, faShoppingBasket, faShoppingCart, faSignOutAlt, faTasks, faUserShield } from '@fortawesome/free-solid-svg-icons';
+import { faColumns, faComment, faFileInvoice, faFolderPlus, faShoppingCart, faSignOutAlt, faTasks, faUserShield } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Breadcrumb, Button, Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
 import useAuth from '../../Hook/useAuth';
-import './Dashboard.css'
+import './Dashboard.css';
 
 const Dashboard = () => {
     const { logOut } = useAuth()
@@ -32,8 +32,8 @@ const Dashboard = () => {
                                 <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/payment"><FontAwesomeIcon icon={faFileInvoice} /> Payment</Nav.Link><br />
                                 {/* </>}
                             {admin && <div> */}
-                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/manageorders"> <FontAwesomeIcon icon={faShoppingBasket} /> Manage  Orders</Nav.Link><br />
-                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/manageallproducts"> <FontAwesomeIcon icon={faTasks} /> Manage All Products</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/manageorders"> <i class="fas fa-shopping-bag"></i> Manage  Orders</Nav.Link><br />
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/manageallproducts"> <FontAwesomeIcon icon={faTasks} /> Manage Products</Nav.Link><br />
                                 <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/addnewproduct"><FontAwesomeIcon icon={faFolderPlus} /> Add A Product</Nav.Link><br />
                                 <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/makeadmin"><FontAwesomeIcon icon={faUserShield} /> Make Admin</Nav.Link><br />
                                 {/* </div>} */}
