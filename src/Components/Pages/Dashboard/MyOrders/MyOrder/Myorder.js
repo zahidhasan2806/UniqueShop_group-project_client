@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 import './Myorder.css';
 
 const Myorder = ({ order }) => {
@@ -7,19 +8,27 @@ const Myorder = ({ order }) => {
 
     const handleDelete = () => {
 
-        const url = `https://arcane-ravine-56101.herokuapp.com/orders/${_id}`
-        fetch(url, {
-            method: 'DELETE'
+        Swal.fire({
+            icon: "warning",
+            title: "Are you sure to cancel this order?",
+            showCancelButton: true,
+            confirmButtonText: "Yes",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const url = `https://young-shore-30046.herokuapp.com/orders/${_id}`
+                fetch(url, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount) {
+                            Swal.fire("Canceled!", "", "success");
+                            window.location.reload()
+                        }
+                    })
+
+            }
         })
-            .then(res => res.json())
-            .then(data => {
-                // window.location.reload();
-            })
-
-
-
-
-
     }
     return (
         <div className="col-md-12 my-order-details">
@@ -28,22 +37,25 @@ const Myorder = ({ order }) => {
                 <p className="time-date">Placed on {time}</p>
             </div>
             <hr />
-            <div className="d-flex ">
+            <div className="d-flex align-items-center ">
                 <div className="my-order-img">
                     <img src={image} alt="" />
                 </div>
-                <div className="my-order-title">
-                    <p>{title}</p>
+                <div className="d-flex">
+                    <div className="my-order-title">
+                        <p>{title}</p>
+                    </div>
+                    <div className="myprder-price">
+                        <p>${price}</p>
+                    </div>
+                    <div>
+                        <p className="status">{status.status}</p>
+                    </div>
+                    <div>
+                        <button className="order-cancel-btn" onClick={() => handleDelete(_id)}>Cancel</button>
+                    </div>
                 </div>
-                <div className="myprder-price">
-                    <p>${price}</p>
-                </div>
-                <div>
-                    <p className="status">{status.status}</p>
-                </div>
-                <div>
-                    <button className="order-cancel-btn" onClick={() => handleDelete(_id)}>Cancel</button>
-                </div>
+
             </div>
         </div>
     );

@@ -8,25 +8,25 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        const url = `https://arcane-ravine-56101.herokuapp.com/orders/${user.email}`
+        const url = `https://young-shore-30046.herokuapp.com/orders/${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user])
     return (
-        <div className="myorder"> 
-          <h1 className="heading" style={{backgroundColor: '#FCF6F6'}}>My Order</h1>
-          <div className="container">
-            
-          <div className="row">
-          {
-                orders.map(order =><Myorder
-                order={order}
-                key={order._id}
-                ></Myorder>)
-            }
-          </div>
-          </div>
+        <div className="myorder">
+            <h1 className="heading" style={{ backgroundColor: '#FCF6F6' }}>My Order</h1>
+            <div className="container">
+
+                <div className="row">
+                    {
+                        orders.map(order => <Myorder
+                            order={order}
+                            key={order._id}
+                        ></Myorder>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };
