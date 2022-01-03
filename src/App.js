@@ -5,6 +5,7 @@ import AuthProvider from './Components/Context/AuthProvider';
 import Login from './Components/Login/Login';
 import AboutUs from './Components/Pages/AboutUs/AboutUs';
 import BlogDetails1 from './Components/Pages/BlogDetails/BlogDetails1';
+import BuyProducts from './Components/Pages/BuyProducts/BuyProducts';
 import ContactUs from './Components/Pages/ContactUs/ContactUs';
 import AddNewProduct from './Components/Pages/Dashboard/AddNewProduct/AddNewProduct';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
@@ -16,7 +17,7 @@ import Payment from './Components/Pages/Dashboard/Payment/Payment';
 import Reviews from './Components/Pages/Dashboard/Reviews/Reviews';
 import Home from './Components/Pages/Home/Home';
 import Product from './Components/Pages/Product/Product';
-import ProductDetails from './Components/Pages/ProductDetails/ProductDetails';
+import ProductView from './Components/Pages/ProductView/ProductView';
 import StoreLocation from './Components/Pages/StoreLocation/StoreLocation';
 import Register from './Components/Register/Register';
 
@@ -34,7 +35,8 @@ function App() {
             <Route path="product" element={<Product />} />
             <Route path="contact" element={<ContactUs />} />
             <Route path="about" element={<AboutUs />} />
-            <Route path="product/:_id" element={<ProductDetails />} />
+            <Route path="product/:productId" element={<ProductView />} />
+            <Route path="buyProducts/:productId" element={<BuyProducts />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="storeLocation" element={<StoreLocation />} />

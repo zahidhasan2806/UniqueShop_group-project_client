@@ -2,6 +2,8 @@ import { CircularProgress, Container, Grid, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../Hook/useAuth';
+import Footer from '../Shared/Footer/Footer';
+import Header from '../Shared/Header/Header';
 import './Login.css';
 
 const Login = () => {
@@ -33,7 +35,9 @@ const handleGoogleSignIn = () => {
 }
     
     return (
-        <Container className="text-center login-sec">
+       <>
+       <Header />
+       <Container className="text-center login-sec">
         <Grid container spacing={2}>
             <Grid item sx={{ mt: 8 }} xs={12} md={12}>
             {isLoading && <CircularProgress />}
@@ -69,6 +73,8 @@ const handleGoogleSignIn = () => {
          
         </Grid>
     </Container>
+       <Footer />
+       </>
     );
 };
 

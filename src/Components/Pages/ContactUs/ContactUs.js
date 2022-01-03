@@ -1,10 +1,14 @@
 import React from 'react';
 import { FloatingLabel, Form } from 'react-bootstrap';
+import Footer from '../../Shared/Footer/Footer';
+import Header from '../../Shared/Header/Header';
 import './ContactUs.css';
 
 const ContactUs = () => {
     return (
-       <div className="contact-us">
+           <>
+           <Header />
+           <div className="contact-us">
            <h3 className="heading">contact us</h3>
             <div className="container ">
             <div className="row contact-content">
@@ -39,6 +43,8 @@ const ContactUs = () => {
             </div>
         </div>
        </div>
+      <Footer />
+       </>
     );
 };
 
