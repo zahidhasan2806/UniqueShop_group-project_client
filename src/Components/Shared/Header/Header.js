@@ -1,55 +1,61 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import useAuth from './../../Hook/useAuth';
+import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../Hook/useAuth';
+import useFirebase from '../../Hook/useFirebase';
+import './Header.css';
 
 const Header = () => {
 
-    const { user, logOut } = useAuth();
+    const { user } = useAuth();
+    const { logOut } = useFirebase();
     return (
-        <div>
-
-            {/* <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"> */}
-            <Navbar collapseOnSelect expand="lg" bg="" style={{ background: "#e3f2fd" }} variant="light">
-                <Container>
-                    <Navbar.Brand href="/" className="text-dark fw-bold">UNIQUE<span className="text-danger">SHOP</span></Navbar.Brand>
-
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav" variant="dark">
-                        <Nav className="me-auto fw-bold">
-                            <Nav.Link href="/shop">Shop</Nav.Link>
-                            <Nav.Link href="/product">Product</Nav.Link>
-                            <Nav.Link href="/sale">Sale</Nav.Link>
-                            <Nav.Link href="/portfolio">Portfolio</Nav.Link>
-                            <Nav.Link href="/lookbook">Lookbook</Nav.Link>
-                            <Nav.Link href="/blog">Blog</Nav.Link>
-                            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-
-
-                        </Nav>
-
-                        {/* <Nav>
-                                {
-                                    <Nav.Link href="/register">Register</Nav.Link>
-                                }
-                            </Nav> */}
-                        <Nav>
-
-                            {
-                                user.displayName ?
-                                    <div><span className="text-warning">{user.displayName}</span><button onClick={logOut}>Sign Out</button> </div> :
-
-                                    <Nav className='fw-bold '>
-                                        <Nav.Link href="/login">Log In</Nav.Link>
-                                        <Nav.Link href="/cart">Cart</Nav.Link></Nav>
-
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container header">
+                <Link to="/" className="navbar-brand text-dark " > UNIQUE<span className="text-danger">SHOP</span></Link>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link to="/" className="nav-link" >Home</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/product" className="nav-link" >Product</Link>
+                        </li>
+                        <li className="nav-item ">
+                            <Link to="/about" className="nav-link" >About Us</Link>
+                        </li>
+                        <li className="nav-item ">
+                            <Link to="/contact" className="nav-link" >Contact Us</Link>
+                        </li>
+                        {user.email &&
+                            <li className="nav-item ">
+                                <Link to="/dashboard" className="nav-link" >Dashboard</Link>
+                            </li>
+                        }
+                        <li className="user">
+                            {user?.photoURL ?
+                                <img className="px-2  user" src={user.photoURL} alt="" /> :
+                                <img className="px-2 " src="https://i.ibb.co/5r8HpR3/user-1.png" alt="" />
                             }
+                        </li>
+                        {user.displayName && <li className=" user-name">{user?.displayName}</li>}
 
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+                        {user.email ?
 
-        </div>
+                            <li className="nav-item dashbord">
+                                <button className="nav-link" onClick={logOut}>Logout</button>
+                            </li> :
+                            <li className="nav-item  ">
+                                <NavLink to="/login" className="nav-link sign-in" >Sign In</NavLink>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
     );
 };
 

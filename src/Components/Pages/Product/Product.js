@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
+import Footer from '../../Shared/Footer/Footer';
+import Header from '../../Shared/Header/Header';
 import SingleProduct from '../SingleProduct/SingleProduct';
 
 const Product = () => {
@@ -10,6 +12,8 @@ const Product = () => {
             .then(data => setProducts(data))
     }, [])
     return (
+        <>
+        <Header />
         <div className='container'>
             {/* total data={products.length} */}
             <h1 className='m-5'>Best Selling</h1>
@@ -22,6 +26,8 @@ const Product = () => {
 
 
         </div>
+        <Footer />
+        </>
     );
 };
 
