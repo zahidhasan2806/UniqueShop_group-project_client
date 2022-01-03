@@ -10,7 +10,9 @@ const useFirebase = () => {
   const [authError, setAuthError] = useState('');
   const [user, setUser] = useState({})
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
+  const [admin, setAdmin] = useState(false);
+
 
 
 
@@ -105,7 +107,12 @@ const useFirebase = () => {
       body: JSON.stringify(user)
     })
       .then()
-  }
+  };
+  useEffect(() => {
+    fetch(`https://young-shore-30046.herokuapp.com/users/${user.email}`)
+      .then(res => res.json())
+      .then(data => setAdmin(data.admin))
+  }, [user.email])
   return {
     user,
     signInWithGoogle,
@@ -115,7 +122,7 @@ const useFirebase = () => {
     setError,
     loginUser,
     authError,
-    registerUser
+    registerUser, admin
 
 
   }
