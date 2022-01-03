@@ -4,9 +4,9 @@ const StoreLocation = () => {
     return (
         <div>
             <div><h1 className='p-5 text-white' style={{ background: "#6e7a71" }}>Store Location</h1></div>
-            <div class="container">
-                <div class="row text-start">
-                    <div class="col">
+            <div className="container">
+                <div className="row text-start">
+                    <div className="col">
                         <div className='mt-4'>
                             <h3 className='fw-bold'>BULGARIA</h3>
                             <h4>Mall Varna</h4>
@@ -44,7 +44,7 @@ const StoreLocation = () => {
                             <p>Tel: +62-21 29007806</p>
                         </div>
                     </div>
-                    <div class="col">
+                    <div className="col">
                         <div className='mt-5'>
 
                             <h4>Central pedestrian area</h4>

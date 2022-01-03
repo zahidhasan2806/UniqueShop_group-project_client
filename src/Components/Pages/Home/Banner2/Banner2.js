@@ -7,7 +7,7 @@ const Banner2 = () => {
             <div className="container">
                 <div className="row">
                     <div className="single-col col-lg-6 col-md-12">
-                        <Link to="shop" alt="Home" className="single-banner">
+                        <Link to="product" alt="Home" className="single-banner">
                             <img src="https://i.ibb.co/nRpR9j9/s10-720x.jpg" alt="" />
                             <div className="item-disc">
                                 <span className="item-title">Galaxy S10 Lite</span>
@@ -17,7 +17,7 @@ const Banner2 = () => {
                         </Link>
                     </div>
                     <div className="single-col col-lg-6 col-md-12">
-                        <Link to="shop" alt="Home" className="single-banner">
+                        <Link to="product" alt="Home" className="single-banner">
                             <img src="https://i.ibb.co/CtjtcbP/smartwatch-720x.jpg" alt="" />
                             <div className="item-disc">
                                 <span className="item-title">New SmartWatch</span>
@@ -26,7 +26,7 @@ const Banner2 = () => {
                             </div>
                         </Link>
                     </div>
-                    
+
                     <div className="single-col col-lg-6 col-md-12">
                         <Link to="shop" alt="shop" className="single-banner">
                             <img src="https://i.ibb.co/d7TC5Xj/laptop-720x.jpg" alt="" />
@@ -49,7 +49,7 @@ const Banner2 = () => {
                             </div>
                         </Link>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

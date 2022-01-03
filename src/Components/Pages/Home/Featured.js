@@ -14,7 +14,7 @@ const Featured = () => {
                 <h1>Feature Collections</h1>
                 <div className="row container">
                     {services.slice(0, 8)?.map((pd, index) => (
-                        <div className="col-md-12 col-lg-3 mt-2">
+                        <div key={pd._id} className="col-md-12 col-lg-3 mt-2">
                             <div className="service p-3 border border mt-5 me-4  products-card">
                                 <div className="service-img">
                                     <Link to={`/product/${pd._id}`}>
