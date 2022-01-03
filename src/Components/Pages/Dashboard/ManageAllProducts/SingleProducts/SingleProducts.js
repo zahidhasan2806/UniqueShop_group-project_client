@@ -1,17 +1,30 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 import './SingleProducts.css';
 const SingleProducts = ({ product }) => {
-    const { title, price, image,_id } = product;
+    const { title, price, image, _id } = product;
     const handleDelete = () => {
-
-        const url = `https://arcane-ravine-56101.herokuapp.com/products/${_id}`
-        fetch(url, {
-            method: 'DELETE'
+        Swal.fire({
+            icon: "warning",
+            title: "Are you sure to delete this order?",
+            showCancelButton: true,
+            confirmButtonText: "Yes",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const url = `https://young-shore-30046.herokuapp.com/products/${_id}`
+                fetch(url, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount) {
+                            Swal.fire("Deleted!", "", "success");
+                            window.location.reload()
+                        }
+                    })
+            }
         })
-            .then(res => res.json())
-            .then(data => {
-                // window.location.reload();
-            })
+
 
     }
 
@@ -24,7 +37,7 @@ const SingleProducts = ({ product }) => {
                 <div className="my-order-title">
                     <p>{title}</p>
                     <div>
-                    <button className="order-cancel-btn"  onClick={() => handleDelete(_id)}>Delete</button>
+                        <button className="order-cancel-btn" onClick={() => handleDelete(_id)}>Delete</button>
                     </div>
                 </div>
                 <div className="myprder-price">
