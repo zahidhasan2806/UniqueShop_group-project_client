@@ -4,6 +4,7 @@ import './App.css';
 import AuthProvider from './Components/Context/AuthProvider';
 import Login from './Components/Login/Login';
 import AboutUs from './Components/Pages/AboutUs/AboutUs';
+import BlogDetails1 from './Components/Pages/BlogDetails/BlogDetails1';
 import ContactUs from './Components/Pages/ContactUs/ContactUs';
 import AddNewProduct from './Components/Pages/Dashboard/AddNewProduct/AddNewProduct';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
@@ -37,6 +38,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="storeLocation" element={<StoreLocation />} />
+            <Route path="/blog/blogDetails1" element={<BlogDetails1 />} />
             <Route path="dashboard" element={<Dashboard />} >
               <Route path="/dashboard/addnewproduct" element={<AddNewProduct />} ></Route>
               <Route path="/dashboard/manageorders" element={<ManageOrders />} ></Route>
@@ -47,7 +49,7 @@ function App() {
               <Route path='/dashboard/payment' element={<Payment />}></Route>
             </Route>
           </Routes>
-         
+
         </BrowserRouter>
 
       </AuthProvider>
