@@ -4,8 +4,7 @@ import './App.css';
 import AuthProvider from './Components/Context/AuthProvider';
 import Login from './Components/Login/Login';
 import AboutUs from './Components/Pages/AboutUs/AboutUs';
-import BlogDetails1 from './Components/Pages/BlogDetails/BlogDetails1';
-import BuyProducts from './Components/Pages/BuyProducts/BuyProducts';
+import Blogs from './Components/Pages/Blogs/Blogs';
 import ContactUs from './Components/Pages/ContactUs/ContactUs';
 import AddNewProduct from './Components/Pages/Dashboard/AddNewProduct/AddNewProduct';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
@@ -20,7 +19,8 @@ import Product from './Components/Pages/Product/Product';
 import ProductView from './Components/Pages/ProductView/ProductView';
 import StoreLocation from './Components/Pages/StoreLocation/StoreLocation';
 import Register from './Components/Register/Register';
-
+import BlogDetails1 from "./Components/Pages/BlogDetails/BlogDetails1";
+import BuyProducts from "./Components/Pages/BuyProducts/BuyProducts";
 
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="product" element={<Product />} />
             <Route path="contact" element={<ContactUs />} />
+            <Route path="blogs" element={<Blogs />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="product/:productId" element={<ProductView />} />
             <Route path="buyProducts/:productId" element={<BuyProducts />} />
