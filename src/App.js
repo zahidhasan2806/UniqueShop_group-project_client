@@ -42,7 +42,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="storeLocation" element={<StoreLocation />} />
-            <Route path="/blog/blogDetails1" element={<BlogDetails1 />} />
+            <Route path="/blogDetails1" element={<BlogDetails1 />} />
             <Route path="dashboard" element={<Dashboard />} >
 
 
