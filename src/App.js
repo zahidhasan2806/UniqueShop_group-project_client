@@ -4,6 +4,7 @@ import './App.css';
 import AuthProvider from './Components/Context/AuthProvider';
 import Login from './Components/Login/Login';
 import AboutUs from './Components/Pages/AboutUs/AboutUs';
+import Blogs from './Components/Pages/Blogs/Blogs';
 import ContactUs from './Components/Pages/ContactUs/ContactUs';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import Home from './Components/Pages/Home/Home';
@@ -30,6 +31,7 @@ function App() {
             <Route path="register" element={<Register />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="contact" element={<ContactUs />} />
+            <Route path="blogs" element={<Blogs />} />
             <Route path="about" element={<AboutUs />} />
           </Routes>
           <Footer />
