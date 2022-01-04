@@ -55,10 +55,10 @@ const AddNewProduct = () => {
                         <input type="text" className="form-control"   {...register("desc1", { required: true })} />
                     </div>
                     <div className="col-md-12">
-                        <input type="text" className="form-control"   {...register("desc2", { required: true })} />
+                        <input type="text" className="form-control"   {...register("desc2")} />
                     </div>
                     <div className="col-md-12">
-                        <input type="text" className="form-control"   {...register("desc3", { required: true })} />
+                        <input type="text" className="form-control"   {...register("desc3")} />
                     </div>
                     <div className="col-md-12">
 

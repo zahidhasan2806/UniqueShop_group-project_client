@@ -8,7 +8,10 @@
 .header ul li a:hover {
   color: #fb5d5d !important;
 }
-
+.user-name {
+  padding-top: 10px;
+  color: rgb(87, 87, 87);
+}
 nav {
   padding: 25px !important;
   background-color: #ffffff;

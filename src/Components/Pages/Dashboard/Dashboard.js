@@ -48,8 +48,8 @@ const Dashboard = () => {
                 </Navbar>
             </Col>
             <Col md={9} className="px-0">
-                <Breadcrumb className="my-4  ms-3">
-                    <Breadcrumb.Item href="/home" className="fs-4">Home</Breadcrumb.Item>
+                <Breadcrumb className="my-4  ms-3 home-Breadcrumb">
+                    <Breadcrumb.Item href="/home" className="fs-4 ">Home</Breadcrumb.Item>
                     <Breadcrumb.Item className="fs-4"> Dashboard</Breadcrumb.Item>
                 </Breadcrumb>
                 <hr />

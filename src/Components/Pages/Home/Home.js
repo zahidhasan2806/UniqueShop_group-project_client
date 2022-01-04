@@ -21,8 +21,6 @@ const Home = () => {
            <FeaturedCollection />
            <Footer />
         </div>
-
-
     );
 };
 

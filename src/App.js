@@ -22,6 +22,7 @@ import MyOrders from './Components/Pages/Dashboard/MyOrders/MyOrders';
 import Payment from './Components/Pages/Dashboard/Payment/Payment';
 import Home from './Components/Pages/Home/Home';
 import MyWishlists from './Components/Pages/MyWishlists/MyWishlists';
+import NotFound from './Components/Pages/NotFound/NotFound';
 import Product from './Components/Pages/Product/Product';
 import ProductView from './Components/Pages/ProductView/ProductView';
 import StoreLocation from './Components/Pages/StoreLocation/StoreLocation';
@@ -63,6 +64,7 @@ function App() {
               <Route path="/dashboard/makeadmin" element={<MakeAdmin />} ></Route>
               <Route path='/dashboard/payment' element={<Payment />}></Route>
             </Route>
+            <Route path="*" element={<NotFound />} />
           </Routes>
 
         </BrowserRouter>

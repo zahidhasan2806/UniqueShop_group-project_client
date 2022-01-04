@@ -13,7 +13,7 @@ const Slider = () => {
                                 <p className=""> <span className="das-color"></span>SUMMER 2022</p>
                                 <h2 className="title-1">Meet Galaxy S20, S20+ </h2>
                                 <h2 className="title-2 text-start"> This is the phone that will change photography</h2>
-                                <Link to="product"><button className="slider-btn">Explore Now<i className="fas fa-shopping-basket"></i></button></Link>
+                                <Link to="/product"><button className="slider-btn">Explore Now<i className="fas fa-shopping-basket"></i></button></Link>
                             </div>
                             <div>
                                 <img className="slider-img-1" src="https://i.ibb.co/5jL8w50/Screenshot-28-removebg-preview.png" alt="img1" />
@@ -29,7 +29,7 @@ const Slider = () => {
                                 <p className=""> <span className="das-color"></span>OFFFER 2021</p>
                                 <h2 className="title-1">Sale Up To </h2>
                                 <h2 className="title-2 text-start">50% <span className="">OFF</span></h2>
-                                <Link to="product"><button className="slider-btn">SHOP NOW <i className="fas fa-shopping-basket"></i></button></Link>
+                                <Link to="/product"><button className="slider-btn">SHOP NOW <i className="fas fa-shopping-basket"></i></button></Link>
                             </div>
                             <div>
                                 <img className="slider-img-1" src="https://i.ibb.co/YQjCN69/Watch-540x-removebg-preview.png" alt="img1" />

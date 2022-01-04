@@ -40,9 +40,7 @@ const MyWishlist = ({Wishlist}) => {
                     <div onClick={() => handleDelete(_id)}>
                     <i class="far fa-trash-alt"></i>
                     </div>
-                    
                 </div>
-
             </div>
         </div>
         </div>
