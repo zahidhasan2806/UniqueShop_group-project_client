@@ -2,7 +2,7 @@ import React from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Navigate, useLocation } from 'react-router-dom';
 import useAuth from '../Hook/useAuth';
-const AdmitRoute = ({ children, ...rest }) => {
+const AdminRoute = ({ children, ...rest }) => {
     const { user, isLoading, admin } = useAuth();
     let location = useLocation()
     if (!admin || isLoading) { return <Spinner animation="border" /> }
@@ -15,4 +15,4 @@ const AdmitRoute = ({ children, ...rest }) => {
     return <Navigate to='/login' state={{ from: location }} />
 };
 
-export default AdmitRoute;
+export default AdminRoute;

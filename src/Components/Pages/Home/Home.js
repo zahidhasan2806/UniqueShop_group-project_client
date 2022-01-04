@@ -6,6 +6,7 @@ import Banner3 from './Banner3/Banner3';
 import Featured from './Featured/Featured';
 import FeaturedCollection from './FeaturedCollection/FeaturedCollection';
 import ShippingType from './ShippingType/ShippingType';
+import Testimonials from './Testimonials/Testimonials/Testimonials';
 import Slider from './Slider/Slider';
 
 const Home = () => {
@@ -13,13 +14,14 @@ const Home = () => {
     return (
         <div>
             <Header />
-           <Slider />
-           <ShippingType />
-           <Banner2 />
-           <Featured />
-           <Banner3 />
-           <FeaturedCollection />
-           <Footer />
+            <Slider />
+            <ShippingType />
+            <Banner2 />
+            <Featured />
+            <Banner3 />
+            <FeaturedCollection />
+            <Testimonials />
+            <Footer />
         </div>
     );
 };

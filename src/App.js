@@ -26,6 +26,7 @@ import NotFound from './Components/Pages/NotFound/NotFound';
 import Product from './Components/Pages/Product/Product';
 import ProductView from './Components/Pages/ProductView/ProductView';
 import StoreLocation from './Components/Pages/StoreLocation/StoreLocation';
+import AdminRoute from './Components/ProtectedRoute/AdminRoute';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import Register from './Components/Register/Register';
 
@@ -53,15 +54,15 @@ function App() {
             <Route path="/blogs/blogDetails2" element={<BlogDetails2 />} />
             <Route path="/blogs/blogDetails3" element={<BlogDetails3 />} />
             <Route path="/blogs/blogDetails4" element={<BlogDetails4 />} />
-            
+
             <Route path="dashboard" element={<Dashboard />} >
-              <Route path="/dashboard/addnewproduct" element={<AddNewProduct />} ></Route>
-              <Route path="/dashboard/manageorders" element={<ManageOrders />} ></Route>
+              <Route path="/dashboard/addnewproduct" element={<AdminRoute ><AddNewProduct /></AdminRoute>} ></Route>
+              <Route path="/dashboard/manageorders" element={<AdminRoute > <ManageOrders /></AdminRoute>} ></Route>
               <Route path="/dashboard/myorders" element={<MyOrders />} ></Route>
-              <Route path="/dashboard/manageallproducts" element={<ManageAllProducts />} ></Route>
+              <Route path="/dashboard/manageallproducts" element={<AdminRoute ><ManageAllProducts /></AdminRoute>} ></Route>
               <Route path="/dashboard/addreview" element={<ReviewForm />} ></Route>
-              <Route path="/dashboard/reviews" element={<Reviews />} ></Route>
-              <Route path="/dashboard/makeadmin" element={<MakeAdmin />} ></Route>
+              <Route path="/dashboard/reviews" element={<AdminRoute ><Reviews /></AdminRoute>} ></Route>
+              <Route path="/dashboard/makeadmin" element={<AdminRoute ><MakeAdmin /></AdminRoute>} ></Route>
               <Route path='/dashboard/payment' element={<Payment />}></Route>
             </Route>
             <Route path="*" element={<NotFound />} />
