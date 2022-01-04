@@ -5,6 +5,9 @@ import AuthProvider from './Components/Context/AuthProvider';
 import Login from './Components/Login/Login';
 import AboutUs from './Components/Pages/AboutUs/AboutUs';
 import BlogDetails1 from './Components/Pages/BlogDetails/BlogDetails1';
+import BlogDetails2 from './Components/Pages/BlogDetails/BlogDetails2';
+import BlogDetails3 from './Components/Pages/BlogDetails/BlogDetails3';
+import BlogDetails4 from './Components/Pages/BlogDetails/BlogDetails4';
 import BuyProducts from './Components/Pages/BuyProducts/BuyProducts';
 import ContactUs from './Components/Pages/ContactUs/ContactUs';
 import AddNewProduct from './Components/Pages/Dashboard/AddNewProduct/AddNewProduct';
@@ -14,6 +17,7 @@ import ManageAllProducts from './Components/Pages/Dashboard/ManageAllProducts/Ma
 import ManageOrders from './Components/Pages/Dashboard/ManageOrders/ManageOrders';
 import MyOrders from './Components/Pages/Dashboard/MyOrders/MyOrders';
 import Payment from './Components/Pages/Dashboard/Payment/Payment';
+import ReviewForm from './Components/Pages/Dashboard/Reviews/ReviewForm';
 import Reviews from './Components/Pages/Dashboard/Reviews/Reviews';
 import Home from './Components/Pages/Home/Home';
 import Product from './Components/Pages/Product/Product';
@@ -41,6 +45,10 @@ function App() {
             <Route path="register" element={<Register />} />
             <Route path="storeLocation" element={<StoreLocation />} />
             <Route path="/blog/blogDetails1" element={<BlogDetails1 />} />
+            <Route path="/blog/blogDetails2" element={<BlogDetails2 />} />
+            <Route path="/blog/blogDetails3" element={<BlogDetails3 />} />
+            <Route path="/blog/blogDetails4" element={<BlogDetails4 />} />
+            <Route path="/review" element={<ReviewForm />} />
             <Route path="dashboard" element={<Dashboard />} >
               <Route path="/dashboard/addnewproduct" element={<AddNewProduct />} ></Route>
               <Route path="/dashboard/manageorders" element={<ManageOrders />} ></Route>
