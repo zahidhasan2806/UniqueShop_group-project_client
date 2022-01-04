@@ -4,7 +4,9 @@ import './App.css';
 import AuthProvider from './Components/Context/AuthProvider';
 import Login from './Components/Login/Login';
 import AboutUs from './Components/Pages/AboutUs/AboutUs';
+import BlogDetails1 from "./Components/Pages/BlogDetails/BlogDetails1";
 import Blogs from './Components/Pages/Blogs/Blogs';
+import BuyProducts from "./Components/Pages/BuyProducts/BuyProducts";
 import ContactUs from './Components/Pages/ContactUs/ContactUs';
 import AddNewProduct from './Components/Pages/Dashboard/AddNewProduct/AddNewProduct';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
@@ -15,13 +17,12 @@ import MyOrders from './Components/Pages/Dashboard/MyOrders/MyOrders';
 import Payment from './Components/Pages/Dashboard/Payment/Payment';
 import Reviews from './Components/Pages/Dashboard/Reviews/Reviews';
 import Home from './Components/Pages/Home/Home';
+import MyWishlists from './Components/Pages/MyWishlists/MyWishlists';
 import Product from './Components/Pages/Product/Product';
 import ProductView from './Components/Pages/ProductView/ProductView';
 import StoreLocation from './Components/Pages/StoreLocation/StoreLocation';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import Register from './Components/Register/Register';
-import BlogDetails1 from "./Components/Pages/BlogDetails/BlogDetails1";
-import BuyProducts from "./Components/Pages/BuyProducts/BuyProducts";
 
 
 function App() {
@@ -41,11 +42,10 @@ function App() {
             <Route path="buyProducts/:productId" element={<ProtectedRoute><BuyProducts /></ProtectedRoute>} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
+            <Route path="mywishlists" element={<MyWishlists />} />
             <Route path="storeLocation" element={<StoreLocation />} />
             <Route path="/blog/blogDetails1" element={<BlogDetails1 />} />
             <Route path="dashboard" element={<Dashboard />} >
-
-
               <Route path="/dashboard/addnewproduct" element={<AddNewProduct />} ></Route>
               <Route path="/dashboard/manageorders" element={<ManageOrders />} ></Route>
               <Route path="/dashboard/myorders" element={<MyOrders />} ></Route>

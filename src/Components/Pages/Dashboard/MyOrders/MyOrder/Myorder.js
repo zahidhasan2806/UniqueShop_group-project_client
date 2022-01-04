@@ -39,7 +39,7 @@ const Myorder = ({ order }) => {
             <hr />
             <div className="d-flex align-items-center ">
                 <div className="my-order-img">
-                    <img src={image} alt="" />
+                    <img src={`data:image/png;base64,${image}`}  alt="" />
                 </div>
                 <div className="d-flex">
                     <div className="my-order-title">

@@ -1,26 +1,28 @@
 import React from 'react';
-import { Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import "./SingleProduct.css";
-
+import '../../Pages/Home/Featured/Featured.css';
 const SingleProduct = (props) => {
     const { image, title, price, _id } = props.product;
 
     return ( 
-        <Col>
-            <Link style={{"textDecoration" : "none",
-    "color": "black"}} to={`/product/${_id}`}>
-              <Card className='card' style={{height:"450px",  border:"none"}} >
-        <Card.Img variant="top" className='cardHover' src={image} />
-        <Card.Body>
-                    <Card.Title >{title}</Card.Title>
-          <Card.Text>
-            <h6 className='text-danger'> ${price} </h6>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-            </Link>
-    </Col>
+      <div className="col-md-12 col-lg-3 mt-2">
+      <div className="service p-3 border border mt-5 me-4  products-card">
+      <div className="service-img">
+          <Link to={`/product/${_id}`}>
+              {" "}
+              <img className="w-100" src={`data:image/png;base64,${image}`} alt="" />
+          </Link>
+
+      </div>
+
+
+      <Link to={`/product/${_id}`}>
+          {" "}
+          <h5 >{title}</h5>
+      </Link>
+      <p className="product-price">Price: {price}</p>
+  </div>
+  </div>
     );
 };
 

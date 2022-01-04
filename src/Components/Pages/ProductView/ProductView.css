@@ -41,18 +41,21 @@
 .buy-now-btn:hover {
   background: #ececec;
 }
-.share-btn:hover {
-  background: #ececec;
-}
+
 .share-btn {
-  height: 2.5rem;
-  width: 30%;
-  text-align: center;
-  border: 1px solid #333;
-  background: transparent;
+  border: 0;
+  background: 0;
   transition: 0.6s;
-  color: #333333;
-  margin-left: 10px;
+  margin-left: 320px;
+  padding-right: 25px;
+}
+.share-btn .fa-share-alt {
+  font-size: 22px;
+  transition: 0.3s;
+  color: #757575;
+}
+.share-btn .fa-share-alt:hover {
+  color: #f57224;
 }
 .produt-btn {
   margin-top: 85px;
@@ -63,7 +66,20 @@
   margin-left: 90%;
   background-color: transparent;
 }
-
+.Wishlist-icon {
+  border: 0;
+  background: 0;
+  margin-left: 0px;
+  padding-top: 20px;
+}
+.Wishlist-icon .fa-heart {
+  font-size: 24px;
+  color: #757575;
+  transition: 0.3s;
+}
+.Wishlist-icon .fa-heart:hover {
+  color: #f57224;
+}
 @media only screen and (max-width: 688px) {
   .prodcout-sec {
     display: flex !important;
@@ -73,5 +89,8 @@
     width: 300px;
     height: 300px;
     margin-bottom: 30px;
+  }
+  .share-btn {
+    margin-left: 70%;
   }
 }

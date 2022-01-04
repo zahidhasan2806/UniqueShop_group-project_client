@@ -11,7 +11,7 @@ const Featured = () => {
     return (
         <div className="Feature">
             <div className="services">
-            <h1>Feature Collections</h1>
+            <h1>Best Selling </h1>
                 <div className="row container">
                     {services.slice(0, 8)?.map((pd, index) => (
                         <div className="col-md-12 col-lg-3 mt-2">
@@ -19,7 +19,7 @@ const Featured = () => {
                                 <div className="service-img">
                                     <Link to={`/product/${pd._id}`}>
                                         {" "}
-                                        <img className="w-100" src={pd?.image} alt="" />
+                                        <img className="w-100" src={`data:image/png;base64,${pd.image}`} alt="" />
                                     </Link>
  
                                 </div>
