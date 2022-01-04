@@ -27,7 +27,7 @@ const Product = () => {
                 <Header />
                 <div className='Feature'>
                     {/* total data={products.length} */}
-                    <h1 className=''>Best Selling</h1>
+                    <h1 className=''>Available products</h1>
 
                     <div className="container row">
                         {

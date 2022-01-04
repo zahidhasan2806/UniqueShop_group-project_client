@@ -15,6 +15,7 @@ import AddNewProduct from './Components/Pages/Dashboard/AddNewProduct/AddNewProd
 import ReviewForm from './Components/Pages/Dashboard/addReviews/ReviewForm';
 import Reviews from './Components/Pages/Dashboard/addReviews/Reviews';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
+import DashboardHome from './Components/Pages/Dashboard/DashboardHome/DashboardHome';
 import MakeAdmin from './Components/Pages/Dashboard/MakeAdmin/MakeAdmin';
 import ManageAllProducts from './Components/Pages/Dashboard/ManageAllProducts/ManageAllProducts';
 import ManageOrders from './Components/Pages/Dashboard/ManageOrders/ManageOrders';
@@ -56,6 +57,7 @@ function App() {
             <Route path="/blogs/blogDetails4" element={<BlogDetails4 />} />
 
             <Route path="dashboard" element={<Dashboard />} >
+            <Route path='/dashboard' element={<DashboardHome />}></Route>
               <Route path="/dashboard/addnewproduct" element={<AdminRoute ><AddNewProduct /></AdminRoute>} ></Route>
               <Route path="/dashboard/manageorders" element={<AdminRoute > <ManageOrders /></AdminRoute>} ></Route>
               <Route path="/dashboard/myorders" element={<MyOrders />} ></Route>
