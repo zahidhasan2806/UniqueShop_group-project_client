@@ -50,3 +50,25 @@
   cursor: pointer;
   text-decoration: none;
 }
+.buy-now-dev {
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (max-width: 688px) {
+  .wishlist .buy-now-dev {
+    margin-left: 10px;
+  }
+  /* .wishlist .buy-now-dev {
+    font-size: 14px;
+    padding: 1px 15px;
+    display: inline-block;
+    border-radius: 24px;
+    background-color: #eff0f5;
+    max-width: 150px;
+    margin-left: 40px;
+  } */
+  .wishlist-sec {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+}

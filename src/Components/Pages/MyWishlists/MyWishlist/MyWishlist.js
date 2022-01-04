@@ -27,16 +27,14 @@ const MyWishlist = ({Wishlist}) => {
                     <img src={`data:image/png;base64,${image}`} alt="" />
                     
                 </div>
-                <div className="d-flex">
+                <div className="d-flex wishlist-sec">
                     <div className="my-order-title">
                         <p className="wishlist-title"><Link  to={`/product/${wishlistproductId}`}>{title}</Link></p>
                     </div>
                     <div className="myprder-price">
                         <p>${price}</p>
                     </div>
-                    <div className="buy-now-dev">
-                        <Link to={`/buyProducts/${wishlistproductId}`}  >Buy Now</Link>
-                    </div>
+                        <Link className="buy-now-dev" to={`/buyProducts/${wishlistproductId}`}  >Buy Now</Link>
                     <div onClick={() => handleDelete(_id)}>
                     <i class="far fa-trash-alt"></i>
                     </div>
