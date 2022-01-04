@@ -12,12 +12,14 @@ const ProductView = () => {
     let { productId } = useParams()
     const location = useLocation();
     const [product, setProduct] = useState([])
+    const [isloading, setIsLoading] = useState(true);
     const sharelink = (`http://localhost:3000${location.pathname}`)
     useEffect(() => {
         const url = `https://young-shore-30046.herokuapp.com/products/${productId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
+            .finally(() => setIsLoading(false))
     }, [productId])
 
 
@@ -40,6 +42,13 @@ const ProductView = () => {
              })
              console.log(databody)
     }
+    if (isloading) {
+        return <div className="d-flex justify-content-center">
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    } else {
 
     return (
        <>
@@ -116,6 +125,7 @@ const ProductView = () => {
        <Footer />
        </>
     );
+    }
 };
 
 export default ProductView;

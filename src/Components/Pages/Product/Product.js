@@ -4,29 +4,42 @@ import Header from '../../Shared/Header/Header';
 import SingleProduct from '../SingleProduct/SingleProduct';
 
 const Product = () => {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
+    const [isloading, setIsLoading] = useState(true);
+
     useEffect(() => {
         fetch('https://young-shore-30046.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
+            .finally(() => setIsLoading(false))
     }, [])
-    return (
-        <>
-            <Header />
-            <div className='Feature'>
-                {/* total data={products.length} */}
-                <h1 className=''>Best Selling</h1>
-
-                <div className="container row">
-                    {
-                        products.map(product => <SingleProduct key={products._id} product={product}></SingleProduct>)
-                    }
-                </div>
-
+    if (isloading) {
+        return <div className="d-flex justify-content-center">
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
             </div>
-            <Footer />
-        </>
-    );
+        </div>
+    }
+    else {
+
+        return (
+            <>
+                <Header />
+                <div className='Feature'>
+                    {/* total data={products.length} */}
+                    <h1 className=''>Best Selling</h1>
+
+                    <div className="container row">
+                        {
+                            products.map(product => <SingleProduct key={products._id} product={product}></SingleProduct>)
+                        }
+                    </div>
+
+                </div>
+                <Footer />
+            </>
+        );
+    }
 };
 
 export default Product;

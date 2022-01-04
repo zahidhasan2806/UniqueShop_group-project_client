@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../Pages/Home/Featured/Featured.css';
 const SingleProduct = (props) => {
-    const { image, title, price, _id } = props.product;
+  const { image, title, price, _id } = props.product;
 
     return ( 
       <div className="col-md-12 col-lg-3 mt-2">

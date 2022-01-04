@@ -29,6 +29,9 @@ const Header = () => {
                         <li className="nav-item ">
                             <Link to="/contact" className="nav-link" >Contact Us</Link>
                         </li>
+                        <li className="nav-item ">
+                            <Link to="/blogs" className="nav-link" >Blogs</Link>
+                        </li>
                         {user.email &&
                             <li className="nav-item ">
                                 <Link to="/mywishlists" className="nav-link" >My Wishlist</Link>

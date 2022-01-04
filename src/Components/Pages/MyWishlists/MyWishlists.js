@@ -10,12 +10,23 @@ import MyWishlist from './MyWishlist/MyWishlist';
 const MyWishlists = () => {
   const { user } = useAuth();
   const [Wishlists, setWishlists] = useState([])
+  const [isloading, setIsLoading] = useState(true);
   useEffect(() => {
     const url = `https://young-shore-30046.herokuapp.com/wishlist/${user.email}`
     fetch(url)
       .then(res => res.json())
       .then(data => setWishlists(data))
+      .finally(() => setIsLoading(false))
   }, [user])
+  if (isloading) {
+    return <div className="d-flex justify-content-center">
+        <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else {
+
   return (
     <>
       <Header />
@@ -47,6 +58,7 @@ const MyWishlists = () => {
     </>
 
   );
+} 
 };
 
 export default MyWishlists;
