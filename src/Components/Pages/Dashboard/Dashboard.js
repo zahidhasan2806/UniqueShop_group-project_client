@@ -27,6 +27,7 @@ const Dashboard = () => {
                                 {/* {!admin && <>  */}
                                 <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/myorders"><FontAwesomeIcon icon={faShoppingCart} /> My Orders</Nav.Link> <br />
 
+                                <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/addreview"> <FontAwesomeIcon icon={faComment} /> Add Review</Nav.Link><br />
                                 <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/reviews"> <FontAwesomeIcon icon={faComment} /> Review</Nav.Link><br />
 
                                 <Nav.Link className='text-dark fw-bold' as={Link} to="/dashboard/payment"><FontAwesomeIcon icon={faFileInvoice} /> Payment</Nav.Link><br />

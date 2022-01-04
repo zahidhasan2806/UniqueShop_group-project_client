@@ -19,3 +19,14 @@
   font-weight: 500;
   font-size: 18px;
 }
+.add-prodcut {
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 688px) {
+  .addproduct-from {
+    height: 600px;
+    width: 330px;
+    margin: 0 !important;
+  }
+}

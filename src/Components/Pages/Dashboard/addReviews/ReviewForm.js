@@ -1,9 +1,11 @@
 import React from 'react';
-import { useForm, } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { useStars } from "stars-rating-react-hooks";
+import useAuth from '../../../Hook/useAuth';
 import Footer from '../../../Shared/Footer/Footer';
 
 const ReviewForm = () => {
+    const{user}= useAuth();
     const { register, handleSubmit, reset, setValue } = useForm();
     const config = {
         totalStars: 5,
@@ -15,6 +17,8 @@ const ReviewForm = () => {
     const { stars, getStarProps, getStarWrapperProps } = useStars(config);
 
     const onSubmit = (data) => {
+        data.name=user.displayName
+        data.email=user.email
         fetch('https://young-shore-30046.herokuapp.com/reviews', {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -34,13 +38,13 @@ const ReviewForm = () => {
                 <form className="row  addproduct-from" onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="col-md-6 mt-5">
-                        <input type="text" placeholder="Enter Your Name" className="form-control"
-                            {...register("text", { required: true })} />
+                        <input type="text" placeholder={user.displayName} className="form-control"
+                            disabled />
                     </div>
 
                     <div className="col-md-6 mt-5">
-                        <input type="email" className="form-control" placeholder="Enter Your Name"
-                            {...register("email", { required: true })} />
+                        <input type="email" className="form-control" placeholder={user.email}
+                          disabled/>
                     </div>
 
                     <div className="col-md-12">

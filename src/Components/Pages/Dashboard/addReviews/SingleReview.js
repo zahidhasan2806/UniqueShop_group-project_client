@@ -5,20 +5,19 @@ const SingleReview = ({review}) => {
 
     const handleDelete = () => {
 
-        const url = `https://arcane-ravine-56101.herokuapp.com/review/${_id}`
+        const url = `https://young-shore-30046.herokuapp.com/reviews/${_id}`
         fetch(url, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
-                window.location.reload();
+                console.log(_id)
             })
 
 
 
-
-
     }
+    console.log(_id)
     return (
         <div className="prodcuts-details-manage col-md-3">
             <div className="my-order-title">

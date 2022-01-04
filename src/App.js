@@ -12,14 +12,14 @@ import Blogs from './Components/Pages/Blogs/Blogs';
 import BuyProducts from "./Components/Pages/BuyProducts/BuyProducts";
 import ContactUs from './Components/Pages/ContactUs/ContactUs';
 import AddNewProduct from './Components/Pages/Dashboard/AddNewProduct/AddNewProduct';
+import ReviewForm from './Components/Pages/Dashboard/addReviews/ReviewForm';
+import Reviews from './Components/Pages/Dashboard/addReviews/Reviews';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import MakeAdmin from './Components/Pages/Dashboard/MakeAdmin/MakeAdmin';
 import ManageAllProducts from './Components/Pages/Dashboard/ManageAllProducts/ManageAllProducts';
 import ManageOrders from './Components/Pages/Dashboard/ManageOrders/ManageOrders';
 import MyOrders from './Components/Pages/Dashboard/MyOrders/MyOrders';
 import Payment from './Components/Pages/Dashboard/Payment/Payment';
-import ReviewForm from './Components/Pages/Dashboard/Reviews/ReviewForm';
-import Reviews from './Components/Pages/Dashboard/Reviews/Reviews';
 import Home from './Components/Pages/Home/Home';
 import MyWishlists from './Components/Pages/MyWishlists/MyWishlists';
 import Product from './Components/Pages/Product/Product';
@@ -52,12 +52,13 @@ function App() {
             <Route path="/blogs/blogDetails2" element={<BlogDetails2 />} />
             <Route path="/blogs/blogDetails3" element={<BlogDetails3 />} />
             <Route path="/blogs/blogDetails4" element={<BlogDetails4 />} />
-            <Route path="/review" element={<ReviewForm />} />
+            
             <Route path="dashboard" element={<Dashboard />} >
               <Route path="/dashboard/addnewproduct" element={<AddNewProduct />} ></Route>
               <Route path="/dashboard/manageorders" element={<ManageOrders />} ></Route>
               <Route path="/dashboard/myorders" element={<MyOrders />} ></Route>
               <Route path="/dashboard/manageallproducts" element={<ManageAllProducts />} ></Route>
+              <Route path="/dashboard/addreview" element={<ReviewForm />} ></Route>
               <Route path="/dashboard/reviews" element={<Reviews />} ></Route>
               <Route path="/dashboard/makeadmin" element={<MakeAdmin />} ></Route>
               <Route path='/dashboard/payment' element={<Payment />}></Route>
