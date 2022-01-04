@@ -1,8 +1,11 @@
 import React from 'react';
+import Footer from '../../Shared/Footer/Footer';
+import Header from '../../Shared/Header/Header';
 
 const StoreLocation = () => {
     return (
         <div>
+            <Header></Header>
             <div><h1 className='p-5 text-white' style={{ background: "#6e7a71" }}>Store Location</h1></div>
             <div className="container">
                 <div className="row text-start">
@@ -79,6 +82,7 @@ const StoreLocation = () => {
                 </div>
 
             </div>
+            <Footer></Footer>
         </div>
     );
 };

@@ -3,14 +3,14 @@ import { Breadcrumb } from 'react-bootstrap';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 
-const BlogDetails2 = () => {
+const BlogDetails4 = () => {
     return (
         <div>
             <Header></Header>
 
             <div className='container'>
                 <div className='mt-5'>
-                    <h2>Technical laptop</h2>
+                    <h2>Let shop more</h2>
                     <Breadcrumb className=''>
                         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                         <Breadcrumb.Item href="/blogs">
@@ -20,16 +20,16 @@ const BlogDetails2 = () => {
                     </Breadcrumb>
                 </div>
                 <div className=''>
-                    <img className='fluid container' src="https://www.maketecheasier.com/assets/uploads/2017/01/laptop-tech-to-look-forward-to-in-2017-featured-image.jpg" alt="" />
+                    <img className='fluid container' src="https://cdn.shopify.com/s/files/1/2526/5844/articles/post5.jpg?v=1513062742" alt="" />
                 </div>
                 <div className='text-start mt-5'>
-                    <p>Dec 12, 2020</p>
+                    <p>Dec 12,2020</p>
 
 
 
-                    <h3>Technical laptop</h3>
+                    <h3>Let shop more</h3>
                     <p> It has become the industry standard for design mockups and prototypes. By adding a little bit of Latin to a mockup, you are able to show clients a more complete
-                        version of your design.Every Product is genuine you can check those also. If you face any problems just sent a message to us you can find that in contact us. We provide money back gurantte also.We value your money and we give the best service.Your appreciate your review feel free to review we will try to improve our services. </p>
+                        version of your design.Every Product is genuine you can check those also. If you face any problems just sent a message to us you can find that in contact us. We provide money back gurantte also.We value your money and we give the best service.Your appreciate your review feel free to review we will try to improve our services.</p>
                     <hr />
                     <div>
 
@@ -58,4 +58,4 @@ const BlogDetails2 = () => {
     );
 };
 
-export default BlogDetails2;
+export default BlogDetails4;

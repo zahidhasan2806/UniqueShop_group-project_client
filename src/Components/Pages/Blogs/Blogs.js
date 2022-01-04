@@ -94,7 +94,7 @@ const Blogs = () => {
                         mockup, you are able to show clients a more complete
                         version of your design witho...
                       </Card.Text>
-                      <Button as={Link} to="/blogDetails1" className="btn btn-dark">Read more...</Button>
+                      <Button as={Link} to="/blogs/blogDetails1" className="btn btn-dark">Read more...</Button>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -114,7 +114,7 @@ const Blogs = () => {
                         mockup, you are able to show clients a more complete
                         version of your design witho...
                       </Card.Text>
-                      <Button as={Link} to="/blogDetails1" className="btn btn-dark">Read more...</Button>
+                      <Button as={Link} to="/blogs/blogDetails2" className="btn btn-dark">Read more...</Button>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -136,7 +136,7 @@ const Blogs = () => {
                         mockup, you are able to show clients a more complete
                         version of your design witho...
                       </Card.Text>
-                      <Button as={Link} to="/blogDetails1" className="btn btn-dark">Read more...</Button>
+                      <Button as={Link} to="/blogs/blogDetails3" className="btn btn-dark">Read more...</Button>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -156,7 +156,7 @@ const Blogs = () => {
                         mockup, you are able to show clients a more complete
                         version of your design witho...
                       </Card.Text>
-                      <Button as={Link} to="/blogDetails1" className="btn btn-dark">Read more...</Button>
+                      <Button as={Link} to="/blogs/blogDetails4" className="btn btn-dark">Read more...</Button>
                     </Card.Body>
                   </Card>
                 </Col>

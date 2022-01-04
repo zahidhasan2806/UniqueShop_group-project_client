@@ -10,7 +10,7 @@ const BlogDetails3 = () => {
 
             <div className='container'>
                 <div className='mt-5'>
-                    <h2>Checking A Product</h2>
+                    <h2>Comparing bewteen products</h2>
                     <Breadcrumb className=''>
                         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                         <Breadcrumb.Item href="/blogs">
@@ -20,15 +20,16 @@ const BlogDetails3 = () => {
                     </Breadcrumb>
                 </div>
                 <div className=''>
-                    <img className='fluid container' src="https://cdn.shopify.com/s/files/1/2526/5844/articles/post6.jpg?v=1513062696" alt="" />
+                    <img className='fluid container' src="https://cdn.shopify.com/s/files/1/2526/5844/articles/post13_20842774-b354-4540-a774-e7d7f5900dde.jpg?v=1513062582" alt="" />
                 </div>
                 <div className='text-start mt-5'>
-                    <p>Dec 12,2017</p>
+                    <p>Dec 12,2020</p>
 
 
 
-                    <h3>Checking a Product</h3>
-                    <p>Every Product is genuine you can check those also. If you face any problems just sent a message to us you can find that in contact us. We provide money back gurantte also.We value your money and we give the best service.Your appreciate your review feel free to review we will try to improve our services. </p>
+                    <h3>Comparing bewteen products</h3>
+                    <p> It has become the industry standard for design mockups and prototypes. By adding a little bit of Latin to a mockup, you are able to show clients a more complete
+                        version of your design.Every Product is genuine you can check those also. If you face any problems just sent a message to us you can find that in contact us. We provide money back gurantte also.We value your money and we give the best service.Your appreciate your review feel free to review we will try to improve our services.</p>
                     <hr />
                     <div>
 

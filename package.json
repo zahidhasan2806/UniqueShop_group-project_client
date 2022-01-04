@@ -23,6 +23,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-share": "^4.4.0",
+    "stars-rating-react-hooks": "^0.2.4",
     "sweetalert2": "^11.3.3",
     "web-vitals": "^2.1.2"
   },
