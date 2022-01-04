@@ -23,6 +23,9 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-share": "^4.4.0",
+    "react-slick": "^0.28.1",
+    "react-star-ratings": "^2.3.0",
+    "slick-carousel": "^1.8.1",
     "stars-rating-react-hooks": "^0.2.4",
     "sweetalert2": "^11.3.3",
     "web-vitals": "^2.1.2"

@@ -35,11 +35,11 @@ const ReviewForm = () => {
 
                     <div className="col-md-6 mt-5">
                         <input type="text" placeholder="Enter Your Name" className="form-control"
-                            {...register("text", { required: true })} />
+                            {...register("name", { required: true })} />
                     </div>
 
                     <div className="col-md-6 mt-5">
-                        <input type="email" className="form-control" placeholder="Enter Your Name"
+                        <input type="email" className="form-control" placeholder="Enter Your Email"
                             {...register("email", { required: true })} />
                     </div>
 

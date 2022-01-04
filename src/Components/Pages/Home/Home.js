@@ -7,19 +7,21 @@ import Featured from './Featured/Featured';
 import FeaturedCollection from './FeaturedCollection/FeaturedCollection';
 import ShippingType from './ShippingType/ShippingType';
 import Slider from './Slider/Slider';
+import Testimonials from './Testimonials/Testimonials/Testimonials';
 
 const Home = () => {
 
     return (
         <div>
             <Header />
-           <Slider />
-           <ShippingType />
-           <Banner2 />
-           <Featured />
-           <Banner3 />
-           <FeaturedCollection />
-           <Footer />
+            <Slider />
+            <ShippingType />
+            <Banner2 />
+            <Featured />
+            <Banner3 />
+            <FeaturedCollection />
+            <Testimonials></Testimonials>
+            <Footer />
         </div>
 
 
