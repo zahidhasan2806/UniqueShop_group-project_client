@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-    <img src="https://i.ibb.co/NFWRHs9/Screenshot-45.png" alt="Logo" width="80" height="80">
+    <img src="https://i.ibb.co/NFWRHs9/Screenshot-45.png" alt="Logo" >
 </div>
 
 <!-- TABLE OF CONTENTS -->
