@@ -4,6 +4,7 @@ import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, Linkedi
 import useAuth from '../../Hook/useAuth';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
+import Spinner from '../Spinner/Spinner';
 import './ProductView.css';
 
 
@@ -43,26 +44,7 @@ const ProductView = () => {
     }
     if (isloading) {
         return (
-            <> <Header />
-                <div className="d-flex justify-content-center mt-5 product-view-loading ">
-                    {/* <div className="spinner-border" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div> */}
-                    <svg width="200" height="200" viewBox="0 0 100 100">
-                        <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
-                        <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
-                        <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
-                        <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
-                    </svg><svg width="200" height="200" viewBox="0 0 100 100">
-                        <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
-                        <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
-                        <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
-                        <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
-                    </svg>
-
-                </div>
-                
-            </>
+           <Spinner />
         )
 
     } else {

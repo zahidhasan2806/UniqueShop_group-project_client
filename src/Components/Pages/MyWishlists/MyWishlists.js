@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hook/useAuth';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
+import Spinner from '../Spinner/Spinner';
 import MyWishlist from './MyWishlist/MyWishlist';
 
 
@@ -19,11 +20,9 @@ const MyWishlists = () => {
       .finally(() => setIsLoading(false))
   }, [user])
   if (isloading) {
-    return <div className="d-flex justify-content-center">
-        <div className="spinner-border" role="status">
-            <span className="visually-hidden">Loading...</span>
-        </div>
-    </div>
+    return (
+     <Spinner />
+    )
 }
 else {
 

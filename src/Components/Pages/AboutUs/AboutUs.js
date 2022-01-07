@@ -18,7 +18,7 @@ const AboutUs = () => {
           </div>
           <Container className="mt-4">
             <Row>
-              <Col xs={12} md={6} lg={6}>
+              <Col xs={12} md={6} lg={6} className="g-4 p-4">
                 <h2>OUR MISSION</h2>
                 <p className="text-justify">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -27,7 +27,7 @@ const AboutUs = () => {
                   beatae vitae dicta sunt explicabo nemo enim ipsam.
                 </p>
               </Col>
-              <Col xs={12} md={6} lg={6}>
+              <Col xs={12} md={6} lg={6} className="g-4 p-4">
                 <h2>OUR STORIES</h2>
                 <p className="text-justify">
                   Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -38,7 +38,7 @@ const AboutUs = () => {
               </Col>
             </Row>
             <Row>
-              <Col xs={12} md={6} lg={6}>
+              <Col xs={12} md={6} lg={6} className="g-4 p-5">
                 <h2>OUR APPROACH</h2>
                 <p className="text-justify">
                   Neque porro quisquam est, qui dolorem ipsum quia dolor sit
@@ -47,7 +47,7 @@ const AboutUs = () => {
                   quaerat voluptatem.
                 </p>
               </Col>
-              <Col xs={12} md={6} lg={6}>
+              <Col xs={12} md={6} lg={6} className="g-4 p-4">
                 <h2>OUR PHILOSOPHY</h2>
                 <p className="text-justify">
                   Quis autem vel eum iure reprehenderit qui in ea voluptate
@@ -60,7 +60,7 @@ const AboutUs = () => {
           </Container>
 
           <div className="AboutCard container">
-            <Row xs={1} md={3} className="g-3">
+            <Row xs={1} md={3} className="g-5">
               <Col>
                 <Card>
                   <Card.Img variant="top" height="200px" src={img1} />

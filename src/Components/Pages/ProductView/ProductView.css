@@ -80,7 +80,7 @@
 .Wishlist-icon .fa-heart:hover {
   color: #f57224;
 }
-svg {
+.product-view-loading svg {
   position: fixed;
   top: 50%;
   left: 50%;

@@ -43,7 +43,8 @@ const BuyProducts = () => {
             <div>
                 <div className="booking-sec">
                     <div className="container ">
-                        <div className="row">
+                        <div className="shipping-form">
+                        <div className=" col-md-12">
                             <div className="d-flex col-md-6 product-deatils">
                                 <div className="product-img">
                                     <img src={`data:image/png;base64,${image}`} alt="" />
@@ -55,50 +56,50 @@ const BuyProducts = () => {
                                     <p>${price}</p>
                                 </div>
                             </div>
-                            <div className=" col-md-6">
-                                <form className="row  shipping-form" onSubmit={handleSubmit(onSubmit)}>
-                                    <p className="shipping-billing">Shipping & Billing</p>
-                                    <div className="col-md-12">
-                                        <label className="form-label">Name</label>
-                                        <input type="name" className="form-control"  {...register("full_name", { required: true })} />
-                                    </div>
+                            <form className="row  " onSubmit={handleSubmit(onSubmit)}>
+                                <p className="shipping-billing">Shipping & Billing</p>
+                                <div className="col-md-12">
+                                    <label className="form-label">Name</label>
+                                    <input type="name" className="form-control"  {...register("full_name", { required: true })} />
+                                </div>
 
-                                    <div className="col-6">
-                                        <label className="form-label">Address </label>
-                                        <input type="text" className="form-control" id="inputAddress1" placeholder="Apartment, studio, or floor"  {...register("address", { required: true })} />
+                                <div className="col-6">
+                                    <label className="form-label">Address </label>
+                                    <input type="text" className="form-control" id="inputAddress1" placeholder="Apartment, studio, or floor"  {...register("address", { required: true })} />
+                                </div>
+                                <div className="col-6">
+                                    <label className="form-label">Phone </label>
+                                    <input type="text" className="form-control"  {...register("phone", { required: true })} />
+                                </div>
+                                <div className="col-md-6">
+                                    <label className="form-label">City</label>
+                                    <input type="text" className="form-control" id="inputCity"  {...register("city", { required: true })} />
+                                </div>
+                                <div className="col-md-4">
+                                    <label className="form-label">State</label>
+                                    <input type="text" className="form-control" id="inputCity"  {...register("state", { required: true })} />
+                                </div>
+                                <div className="col-md-2">
+                                    <label className="form-label">Zip</label>
+                                    <input type="text" className="form-control" id="inputZip" {...register("zip", { required: true })} />
+                                </div>
+                                <div className="col-12">
+                                    <div className="form-check">
+                                        <input className="form-check-input" type="checkbox" id="gridCheck" {...register("checkbox", { required: true })} />
+                                        <label className="form-check-label"  >
+                                            Check me out
+                                        </label>
                                     </div>
-                                    <div className="col-6">
-                                        <label className="form-label">Phone </label>
-                                        <input type="text" className="form-control"  {...register("phone", { required: true })} />
-                                    </div>
-                                    <div className="col-md-6">
-                                        <label className="form-label">City</label>
-                                        <input type="text" className="form-control" id="inputCity"  {...register("city", { required: true })} />
-                                    </div>
-                                    <div className="col-md-4">
-                                        <label className="form-label">State</label>
-                                        <input type="text" className="form-control" id="inputCity"  {...register("state", { required: true })} />
-                                    </div>
-                                    <div className="col-md-2">
-                                        <label className="form-label">Zip</label>
-                                        <input type="text" className="form-control" id="inputZip" {...register("zip", { required: true })} />
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-check">
-                                            <input className="form-check-input" type="checkbox" id="gridCheck" {...register("checkbox", { required: true })} />
-                                            <label className="form-check-label"  >
-                                                Check me out
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <input type="submit" value="Submit" className="btn btn-primary" />
+                                </div>
+                                <div className="col-12">
+                                    <input type="submit" value="Submit" className="btn btn-primary" />
 
-                                    </div>
-                                </form>
-                            </div>
+                                </div>
+                            </form>
+                        </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <Footer />
