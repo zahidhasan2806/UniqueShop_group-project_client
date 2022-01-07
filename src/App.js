@@ -51,6 +51,7 @@ function App() {
             <Route path="register" element={<Register />} />
             <Route path="mywishlists" element={<MyWishlists />} />
             <Route path="storeLocation" element={<StoreLocation />} />
+            
             <Route path="/blogs/blogDetails1" element={<BlogDetails1 />} />
             <Route path="/blogs/blogDetails2" element={<BlogDetails2 />} />
             <Route path="/blogs/blogDetails3" element={<BlogDetails3 />} />
