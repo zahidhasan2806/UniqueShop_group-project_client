@@ -40,7 +40,6 @@ const ProductView = () => {
             .then((result) => {
                 
              })
-             console.log(databody)
     }
     if (isloading) {
         return <div className="d-flex justify-content-center">

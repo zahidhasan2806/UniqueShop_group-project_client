@@ -17,10 +17,6 @@ const Featured = () => {
                         <div className="col-md-12 col-lg-3 mt-2">
                             <div className="service p-3 border mt-5 me-4  products-card">
                                 <div className="service-img-container">
-                                    {/* <Link to={`/product/${pd._id}`}>
-                                        {" "}
-                                        <img className="w-100" src={`data:image/png;base64,${pd.image}`} alt="" />
-                                    </Link> */}
                                     <img className="w-100 image" src={`data:image/png;base64,${pd.image}`} alt="" />
                                     <div className="overlay">
                                         <div className="text">
@@ -34,11 +30,9 @@ const Featured = () => {
                                     </div>
 
                                 </div>
-
-
                                 <Link to={`/product/${pd._id}`}>
                                     {" "}
-                                    <h5 >{pd.title}</h5>
+                                    <h5 className="mt-4">{pd.title}</h5>
                                 </Link>
                                 <p className="product-price">Price: {pd.price}</p>
                             </div>
