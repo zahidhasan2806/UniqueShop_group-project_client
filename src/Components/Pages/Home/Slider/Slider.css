@@ -20,7 +20,7 @@
   position: absolute;
   margin-left: -40px;
   margin-top: 11px;
-  background-color: #fb5d5d;
+  background-color: #222222;
   width: 30px;
   height: 3px;
   content: "";
@@ -54,7 +54,7 @@
   width: 500px;
 } */
 .slider-btn {
-  background: linear-gradient(155deg, #fd3f6b 0, #fd7863 98%, #f3dfe0 100%);
+  background: #222222;
   border: 0;
   width: 150px;
   height: 40px;
@@ -62,11 +62,11 @@
   color: #fff;
   margin-right: 350px;
   margin-top: 20px;
-  font-weight: 700;
+  font-weight: 600;
   transition: 0.6s;
 }
 .slider-btn:hover {
-  box-shadow: 0 5px 15px 0 rgb(153 63 107 / 50%);
+  box-shadow: 0 5px 15px 0 rgba(68, 61, 64, 0.5);
 }
 .fa-shopping-basket {
   padding-left: 10px;

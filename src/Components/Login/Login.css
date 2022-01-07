@@ -76,6 +76,12 @@
   padding-right: 150px;
   font-weight: 500;
 }
+.admin-dev p {
+  line-height: 0;
+  text-align: left;
+  padding-left: 355px;
+  color: gray;
+}
 @media only screen and (max-width: 688px) {
   .sign-up-btn {
     padding: 12px 100px;
@@ -100,5 +106,8 @@
     padding-top: 25px;
     padding-right: 0px;
     font-weight: 500;
+  }
+  .admin-dev p {
+    padding-left: 60px;
   }
 }

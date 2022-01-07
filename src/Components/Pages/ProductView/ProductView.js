@@ -13,7 +13,7 @@ const ProductView = () => {
     const location = useLocation();
     const [product, setProduct] = useState([])
     const [isloading, setIsLoading] = useState(true);
-    const sharelink = (`http://localhost:3000${location.pathname}`)
+    const sharelink = (`https://unique-online-shop.web.app${location.pathname}`)
     useEffect(() => {
         const url = `https://young-shore-30046.herokuapp.com/products/${productId}`
         fetch(url)

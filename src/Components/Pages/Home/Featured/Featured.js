@@ -11,20 +11,31 @@ const Featured = () => {
     return (
         <div className="Feature">
             <div className="services">
-            <h1>Best Selling </h1>
+                <h1>Best Selling </h1>
                 <div className="row container">
                     {services.slice(0, 8)?.map((pd, index) => (
                         <div className="col-md-12 col-lg-3 mt-2">
-                            <div className="service p-3 border border mt-5 me-4  products-card">
-                                <div className="service-img">
-                                    <Link to={`/product/${pd._id}`}>
+                            <div className="service p-3 border mt-5 me-4  products-card">
+                                <div className="service-img-container">
+                                    {/* <Link to={`/product/${pd._id}`}>
                                         {" "}
                                         <img className="w-100" src={`data:image/png;base64,${pd.image}`} alt="" />
-                                    </Link>
- 
+                                    </Link> */}
+                                    <img className="w-100 image" src={`data:image/png;base64,${pd.image}`} alt="" />
+                                    <div className="overlay">
+                                        <div className="text">
+                                            <div className="Product-view-btn">
+                                                <Link to={`/product/${pd._id}`}>View</Link>
+                                            </div>
+                                            <div className="Product-buy-btn">
+                                                <Link to={`/buyProducts/${pd._id}`}>Buy Now</Link>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
- 
- 
+
+
                                 <Link to={`/product/${pd._id}`}>
                                     {" "}
                                     <h5 >{pd.title}</h5>
@@ -38,5 +49,5 @@ const Featured = () => {
         </div>
     );
 };
- 
+
 export default Featured;
