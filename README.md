@@ -86,7 +86,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+4. Enter your API key in `Firebase.config.js`
 
    ```js
    const firebaseConfig = {
