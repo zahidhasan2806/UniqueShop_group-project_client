@@ -44,13 +44,24 @@ const ProductView = () => {
     if (isloading) {
         return (
             <> <Header />
-                <div className="d-flex justify-content-center mt-5">
-                    <div className="spinner-border" role="status">
+                <div className="d-flex justify-content-center mt-5 product-view-loading ">
+                    {/* <div className="spinner-border" role="status">
                         <span className="visually-hidden">Loading...</span>
-                    </div>
-                    
+                    </div> */}
+                    <svg width="200" height="200" viewBox="0 0 100 100">
+                        <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+                        <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+                        <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+                        <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+                    </svg><svg width="200" height="200" viewBox="0 0 100 100">
+                        <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+                        <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+                        <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+                        <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+                    </svg>
+
                 </div>
-                <Footer />
+                
             </>
         )
 
