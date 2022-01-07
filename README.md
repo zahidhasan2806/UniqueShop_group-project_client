@@ -138,8 +138,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Email:sabbirnahid5817@gmail.com
-website:nahidhasan-sabbir.me
+Email:sabbirnahid5817@gmail.com <br />
+website:www.nahidhasan-sabbir.me
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
